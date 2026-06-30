@@ -1,0 +1,22 @@
+[
+    {
+        "clave": "popup_principal",
+        "valor": "0",
+        "url": null
+    },
+    {
+        "clave": "boton_flotante",
+        "valor": "0",
+        "url": null
+    },
+    {
+        "clave": "nav_radio",
+        "valor": "0",
+        "url": null
+    },
+    {
+        "clave": "email_contacto",
+        "valor": "info@arrozliborio.com",
+        "url": null
+    }
+]

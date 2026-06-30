@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "Operario de planta",
+        "descripcion": "Buscamos operarios para nuestra planta de procesamiento de arroz. Trabajo por turnos, con oportunidad de crecimiento.",
+        "requisitos": "Secundaria completa\nDisponibilidad de horario\nExperiencia en planta (deseable)\nResponsabilidad y trabajo en equipo",
+        "ubicacion": "Cañas, Guanacaste",
+        "slug": "operario-de-planta",
+        "estado": true
+    },
+    {
+        "titulo": "Asistente de ventas",
+        "descripcion": "Apoyo al equipo comercial en la gestión de clientes y cadenas de supermercados.",
+        "requisitos": "Experiencia en ventas o atención al cliente\nLicencia B1\nManejo de Excel\nExcelente comunicación",
+        "ubicacion": "San José",
+        "slug": "asistente-de-ventas",
+        "estado": true
+    },
+    {
+        "titulo": "Chofer distribuidor",
+        "descripcion": "Distribución de producto a puntos de venta en la región. Ruta establecida.",
+        "requisitos": "Licencia C1 al día\nExperiencia en distribución\nConocimiento de la zona\nManejo defensivo",
+        "ubicacion": "Región Chorotega",
+        "slug": "chofer-distribuidor",
+        "estado": true
+    }
+]

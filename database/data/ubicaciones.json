@@ -1,0 +1,15 @@
+[
+    {
+        "nombre": "Sede principal — Cañas",
+        "descripcion": "Planta y oficinas centrales de Arrocera Liborio.",
+        "periodo_dias": "Lunes a Domingo",
+        "periodo_horas": "7:00 a.m. – 9:00 p.m.",
+        "telefono": null,
+        "email": "info@arrozliborio.com",
+        "waze": null,
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Arrocera+Liborio+Ca%C3%B1as+Guanacaste",
+        "iframe_map": null,
+        "orden": 1,
+        "provincia_nombre": "Guanacaste"
+    }
+]

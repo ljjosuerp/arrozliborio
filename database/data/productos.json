@@ -1,0 +1,123 @@
+[
+    {
+        "nombre": "Arroz Liborio Fit 99%",
+        "linea": "fit",
+        "presentacion": "1.8 kg / 1 kg",
+        "descripcion": null,
+        "pack_color": "celeste",
+        "pack_kind": "bag",
+        "tag": "Semi Integral",
+        "tag_color": "celeste",
+        "imagen": "/img/liborio/productos/Arroz-liborio-fit-99-18kg.png",
+        "orden": 1,
+        "estado": true,
+        "enlaces_compra": [
+            {
+                "tienda": "Auto Mercado",
+                "url": "https://automercado.cr/p/arroz-integral-99%25-fit-liborio-paquete-1800-g/id/516cfd54-17df-4452-bc13-d68232c6f784"
+            },
+            {
+                "tienda": "MásxMenos",
+                "url": "https://www.masxmenos.cr/arroz-liborio-fit-99-grano-entero-1800-g/p"
+            }
+        ]
+    },
+    {
+        "nombre": "Arroz Liborio 99%",
+        "linea": "arroz",
+        "presentacion": "1.8 kg / 1 kg",
+        "descripcion": null,
+        "pack_color": "red",
+        "pack_kind": "bag",
+        "tag": "Más vendido",
+        "tag_color": "red",
+        "imagen": "/img/liborio/productos/Arroz-liborio-99-18kg.png",
+        "orden": 2,
+        "estado": true,
+        "enlaces_compra": null
+    },
+    {
+        "nombre": "Arroz Liborio 95%",
+        "linea": "arroz",
+        "presentacion": "1.8 kg",
+        "descripcion": null,
+        "pack_color": "red",
+        "pack_kind": "bag",
+        "tag": null,
+        "tag_color": null,
+        "imagen": "/img/liborio/productos/Arroz-liborio-95-18kg.png",
+        "orden": 3,
+        "estado": true,
+        "enlaces_compra": null
+    },
+    {
+        "nombre": "Arroz Liborio 90%",
+        "linea": "arroz",
+        "presentacion": "1.8 kg",
+        "descripcion": null,
+        "pack_color": "red",
+        "pack_kind": "bag",
+        "tag": null,
+        "tag_color": null,
+        "imagen": null,
+        "orden": 4,
+        "estado": true,
+        "enlaces_compra": null
+    },
+    {
+        "nombre": "Arroz Liborio 80%",
+        "linea": "arroz",
+        "presentacion": "1.8 kg",
+        "descripcion": null,
+        "pack_color": "red",
+        "pack_kind": "bag",
+        "tag": "80/20",
+        "tag_color": "red",
+        "imagen": null,
+        "orden": 5,
+        "estado": true,
+        "enlaces_compra": null
+    },
+    {
+        "nombre": "Frijol Negro",
+        "linea": "frijol",
+        "presentacion": "700 g",
+        "descripcion": null,
+        "pack_color": "blue",
+        "pack_kind": "bag",
+        "tag": "Negro",
+        "tag_color": "blue",
+        "imagen": "/img/liborio/productos/Frijoles-negros-liborio-700g.png",
+        "orden": 6,
+        "estado": true,
+        "enlaces_compra": null
+    },
+    {
+        "nombre": "Frijol Rojo",
+        "linea": "frijol",
+        "presentacion": "700 g",
+        "descripcion": null,
+        "pack_color": "blue",
+        "pack_kind": "bag",
+        "tag": "Rojo",
+        "tag_color": "blue",
+        "imagen": "/img/liborio/productos/Frijoles-rojos-liborio-700g.png",
+        "orden": 7,
+        "estado": true,
+        "enlaces_compra": null
+    },
+    {
+        "nombre": "Aceite Liborio",
+        "linea": "aceite",
+        "presentacion": "900 ml",
+        "descripcion": null,
+        "pack_color": "wheat",
+        "pack_kind": "bottle",
+        "tag": "Vegetal",
+        "tag_color": "wheat",
+        "imagen": "/img/liborio/productos/Aceite-Liborio.png",
+        "orden": 8,
+        "estado": true,
+        "enlaces_compra": null
+    }
+]

@@ -1,0 +1,1026 @@
+[
+    {
+        "nombre": "Almacen Avila Sociedad Anonima",
+        "region": "Alajuela",
+        "direccion": "Alajuela, Urbanización Meza frente Repuestos Gigante.",
+        "lat": 10.472332,
+        "lng": -84.466328,
+        "precision": "aproximada",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Corporacion De Supermercados Unidos Sociedad De Responsabilidad Limitada",
+        "region": "Alajuela",
+        "direccion": "Cedi Coyol Alajuela, ALAJUELA",
+        "lat": 10.428736,
+        "lng": -84.444713,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Supermercado Compre Bien Sociedad Anonima",
+        "region": "Alajuela",
+        "direccion": "Alajuela- Palmares, detrás del mercado Municipal",
+        "lat": 10.054447,
+        "lng": -84.339857,
+        "precision": "exacta",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Supermercados Molina Sociedad Anonima",
+        "region": "Alajuela",
+        "direccion": "San Ramón 200 N y 100 O, Municipalidad.",
+        "lat": 10.089304,
+        "lng": -84.471054,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Almacen Higuito Mena Sociedad Anonima",
+        "region": "Cartago",
+        "direccion": "250 mtrs este de la Plaza de Deportes, DESAMPARADOS, SAN JOSE",
+        "lat": 9.835732,
+        "lng": -83.694381,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Super Estrella De Mar Cero Cero Uno S.A.",
+        "region": "Cartago",
+        "direccion": "25 Mts sur de la Escuela Gerónimo Bonilla, Turrialba",
+        "lat": 9.792137,
+        "lng": -83.672765,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Almacen Barrantes Y Rodriguez S.A.",
+        "region": "Grecia",
+        "direccion": "Grecia, frente Liceo León Cortés",
+        "lat": 10.110579,
+        "lng": -84.299391,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "La Cruz Super Max Dieciocho Sociedad Anonima",
+        "region": "Grecia",
+        "direccion": "La Cruz 100 Este Municipalidad, LA CRUZ, GUANACASTE",
+        "lat": 10.066983,
+        "lng": -84.277776,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Super Rosvil S.A.",
+        "region": "Grecia",
+        "direccion": "Contiguo a Liceo León Cortés Castro Grecia.",
+        "lat": 10.030157,
+        "lng": -84.291458,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Almacen Zamora Sociedad Anonima",
+        "region": "Guanacaste",
+        "direccion": "100 Mts Sur Catedral, Tilaran, Guanacaste.",
+        "lat": 10.468601,
+        "lng": -84.967376,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Super Panda Sociedad De Responsabilidad Limitada",
+        "region": "Guanacaste",
+        "direccion": "Económico Bijagua, 600 Este del BN , ALAJUELA",
+        "lat": 10.398844,
+        "lng": -85.433829,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Supermercado Nuevo Empino Upala",
+        "region": "Guanacaste",
+        "direccion": "200 Norte de la Cruz Roja, Upala Alajuela.",
+        "lat": 10.355248,
+        "lng": -85.412213,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Almacen Y Suplidoras Bgheredia S.A.",
+        "region": "Heredia",
+        "direccion": "Heredia, HEREDIA",
+        "lat": 10.396781,
+        "lng": -84.013972,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Auto Mercado Sociedad Anonima",
+        "region": "Heredia",
+        "direccion": "AutoMercado, Ref interna 0071 Del cruce la Valencia1.5 km al este Sta Rosa, Sto Domingo, Heredia.",
+        "lat": 10.006096,
+        "lng": -84.116416,
+        "precision": "exacta",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Super La Estrella Rojo F & Y Srl",
+        "region": "Limón",
+        "direccion": "Super Dragón Rio Frio, frente al Banco Nacional, LAS HORQUETAS, SARAPIQUI, HEREDIA",
+        "lat": 10.119909,
+        "lng": -83.343187,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-101-786387 S.A. (Super Dragon Buenos Aires)",
+        "region": "San Jose",
+        "direccion": "Super Dragon Buenos Aires, 25 este de Estación de Bomberos Buenos Aires.",
+        "lat": 9.952771,
+        "lng": -84.079614,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Almacen Salvador Ramirez S.A.",
+        "region": "San Jose",
+        "direccion": "400 Mts Norte Hospital Nacional de Niños. San José.",
+        "lat": 9.909175,
+        "lng": -84.057999,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Empresarial De Supermercados Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "De los Tribunales de Justicia de Goicoechea, 300 mtrs norte y 300 mtrs oeste Perimercados Montelimar",
+        "lat": 9.936617,
+        "lng": -84.123446,
+        "precision": "aproximada",
+        "productos": [
+            "Aceite",
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Manzana Gala Limitada (Supermercado La Corona)",
+        "region": "San Jose",
+        "direccion": "88 M SURDE LAS PANADERIAS CALLE PAVONES, SAN ISIDRO DEL GENERAL.",
+        "lat": 9.966844,
+        "lng": -84.035173,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Super Dragon Del Sur Limitada",
+        "region": "San Jose",
+        "direccion": "Cajón, 200 Sur de iglesia catolica Pilar, Pérez Zeledón.",
+        "lat": 9.913076,
+        "lng": -84.083098,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Arvaco Sociedad Anonima",
+        "region": "Alajuela",
+        "direccion": "COSTADO OESTE DEL MERCADO, SAN RAMON",
+        "lat": 10.456178,
+        "lng": -84.51016,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Cadena Comercial Ramonense Sociedad Anonima",
+        "region": "Alajuela",
+        "direccion": "San Ramón, Alajuela.",
+        "lat": 10.092744,
+        "lng": -84.478072,
+        "precision": "exacta",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Clubco Sociedad Anonima",
+        "region": "Alajuela",
+        "direccion": "Costado Oeste Zona Franca El Coyol Alajuela.",
+        "lat": 10.486405,
+        "lng": -84.421887,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Publik Marketing And Consulting Pmc Sociedad Anonima 3-101-612096",
+        "region": "Alajuela",
+        "direccion": "RUTA 27,SALIDA ATENAS DEL SERVICENTRO DE RIO GRANDE 200MTS NORTE EDIFICIO DE 2 PLANTAS, CARMEN, SAN",
+        "lat": 10.432637,
+        "lng": -84.469812,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Wu J Doble J S.A.",
+        "region": "Alajuela",
+        "direccion": "Alajuela, Barrio San Jose, costado norte de la antigua iglesia del barrio San Jose.",
+        "lat": 10.479332,
+        "lng": -84.483504,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Wusucen Comercial S.A.",
+        "region": "Alajuela",
+        "direccion": "Frente a casa de empeños la cueva, Alajuela centro.",
+        "lat": 10.44091,
+        "lng": -84.423837,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Cadena Comercial Cartaginesa S.A.",
+        "region": "Cartago",
+        "direccion": "Cartago Centro",
+        "lat": 9.868986,
+        "lng": -83.921817,
+        "precision": "exacta",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Distribuidora Quimar La Fila Sociedad Anonima",
+        "region": "Cartago",
+        "direccion": "Frente al Cruce San Gabriel Monte Rey, Acosta, La fila",
+        "lat": 9.819579,
+        "lng": -83.738212,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Parcelaciones De Turrialba S.A.",
+        "region": "Cartago",
+        "direccion": "Turrialba, Calle Puntarenas, 150 norte del IET.",
+        "lat": 9.849805,
+        "lng": -83.64994,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "R Bogantes E Hijos Sociedad Anonima",
+        "region": "Cartago",
+        "direccion": "Frente a Gimnasio Turrialba, Cartago.",
+        "lat": 9.901056,
+        "lng": -83.679645,
+        "precision": "exacta",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-101-531463 Sociedad Anonima",
+        "region": "Grecia",
+        "direccion": "Contiguo Alm. Barrantes y Alfaro en Grecia, Grecia, Alajuela",
+        "lat": 10.090579,
+        "lng": -84.299391,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Apacel Sociedad Anonima",
+        "region": "Grecia",
+        "direccion": "CAÑAS, GUANACASTE",
+        "lat": 10.094425,
+        "lng": -84.343223,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Inversiones Berpiza Sociedad Anonima",
+        "region": "Grecia",
+        "direccion": "LIBANO DE TILARAN, COSTADO NORTE ESCUELA, TILARAN, GUANACASTE",
+        "lat": 10.124652,
+        "lng": -84.25495,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Rosvil De Grecia S.A.",
+        "region": "Grecia",
+        "direccion": "150 Oeste Banco Popular Grecia Alajuela.",
+        "lat": 10.030157,
+        "lng": -84.291458,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Transportes Burro Sociedad Anonima",
+        "region": "Grecia",
+        "direccion": "San Antonio del Tejar, Alajuela",
+        "lat": 10.070884,
+        "lng": -84.302875,
+        "precision": "aproximada",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Tres Hermanos Liang S.A.",
+        "region": "Grecia",
+        "direccion": "Económico Comunidad, Entrada a Playas del Coco, LIBERIA, GUANACASTE",
+        "lat": 10.117578,
+        "lng": -84.316567,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Volguimer Sociedad Anonima",
+        "region": "Grecia",
+        "direccion": "200 Norte de la antigua estacion del ferrocarril, SAN RAFAEL, ALAJUELA",
+        "lat": 10.079157,
+        "lng": -84.2569,
+        "precision": "aproximada",
+        "productos": [
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-102-921369 Srl",
+        "region": "Guanacaste",
+        "direccion": "25 ESTE DEL BCR TILARAN, TILARAN, GUANACASTE",
+        "lat": 10.378844,
+        "lng": -85.433829,
+        "precision": "exacta",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Bolpa De Abangares S.A.",
+        "region": "Guanacaste",
+        "direccion": "La Irma, Las Juantas, Abangares. Detrás de Mayoreo Bolpa.",
+        "lat": 10.265107,
+        "lng": -85.019532,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Ferreteria Tecnica Fetesa Sociedad Anonima",
+        "region": "Guanacaste",
+        "direccion": "Cañas, 100 sur de Maxi Bodega, Guanacaste.",
+        "lat": 10.382691,
+        "lng": -85.47766,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Inversiones Zona Norte Sociedad De Responsabilidad Limitada",
+        "region": "Guanacaste",
+        "direccion": "Económico Upala, Costado Oeste Parque , ALAJUELA",
+        "lat": 10.412917,
+        "lng": -85.389387,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Mario Wu Dos Mil Veinticinco Srl",
+        "region": "Guanacaste",
+        "direccion": "50 Sur de la gasolinera Tilaran, TILARAN, GUANACASTE",
+        "lat": 10.35915,
+        "lng": -85.437312,
+        "precision": "aproximada",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Rincon Corobici Sociedad Anonima",
+        "region": "Guanacaste",
+        "direccion": "Cañas. Guanacaste.",
+        "lat": 10.405844,
+        "lng": -85.451004,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Sehedou Sociedad De Responsabilidad Limitada",
+        "region": "Guanacaste",
+        "direccion": "GUATUSO FRENTE IMPORTADORA MONGE, SAN RAFAEL, GUATUSO, ALAJUELA",
+        "lat": 10.367422,
+        "lng": -85.391337,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-102-937264 Srl",
+        "region": "Heredia",
+        "direccion": "Frente a Walmart, Heredia.",
+        "lat": 10.376781,
+        "lng": -84.013972,
+        "precision": "exacta",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Corporacion Sam Del Atlantico S.A.",
+        "region": "Limón",
+        "direccion": "Limón Centro, 25 mts al este del edificio Radio CasinoDueño: Micchael Sam,",
+        "lat": 10.076313,
+        "lng": -83.321572,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Economico Rio Frio Sociedad De Responsabilidad Limitada",
+        "region": "Limón",
+        "direccion": "Económico Río Frío, Sarapiqui,Horquetas Finca Once 100 mts Este de la Escuela, Limón",
+        "lat": 10.103755,
+        "lng": -83.387019,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "La Paz De Matina Sociedad Anonima",
+        "region": "Limón",
+        "direccion": "Económico Batán, 50 MTS NORTE DE LA CLINICA CCSS, MATINA, LIMON",
+        "lat": 10.133982,
+        "lng": -83.298746,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Servicios Logisticos Los Angeles Limitada",
+        "region": "Limón",
+        "direccion": "50 mts al Norte del Correo, LIMON",
+        "lat": 10.080215,
+        "lng": -83.346671,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Wanshida Mil Seiscientos Ochenta Y Ocho De Costa Rica Sociedad Anonima",
+        "region": "Limón",
+        "direccion": "Cariari Centro frente bomba Uno, LIMON",
+        "lat": 10.126909,
+        "lng": -83.360363,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3 101 864518 Sociedad Anonima",
+        "region": "Puntarenas",
+        "direccion": "150 metros Oeste de la Escuela Augusto Colombari, Barranca, BARRANCA, PUNTARENAS",
+        "lat": 9.115328,
+        "lng": -84.200304,
+        "precision": "aproximada",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Aol Portena Sociedad Anonima",
+        "region": "Puntarenas",
+        "direccion": "150 MTS NORESTE ESCUELA SAN ISIDRO MIRAMAR, MIRAMAR, MONTES DE ORO, PUNTARENAS",
+        "lat": 9.071732,
+        "lng": -84.178688,
+        "precision": "aproximada",
+        "productos": [
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Comercializadora Inter- Global Interglo S.R.L.",
+        "region": "Puntarenas",
+        "direccion": "DETRAS DE BODEGAS CNP, BARRANCA, PUNTARENAS",
+        "lat": 9.099174,
+        "lng": -84.244135,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-102-922145 Sociedad De Responsabilidad Limitada",
+        "region": "San Carlos",
+        "direccion": "Barato Pavon, San Carlos, Alaljuela.",
+        "lat": 10.620366,
+        "lng": -84.425816,
+        "precision": "exacta",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Ding Feng Sociedad De Responsabilidad Limitada",
+        "region": "San Carlos",
+        "direccion": "Económico Pital, San Carlos, Alajuela.",
+        "lat": 10.640366,
+        "lng": -84.425816,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Cacique Los Lirios Sociedad Anonima",
+        "region": "San Carlos",
+        "direccion": "Centro los Lirios, LOS CHILES, ALAJUELA",
+        "lat": 10.596771,
+        "lng": -84.4042,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Economico Dosr Sociedad Anonima",
+        "region": "San Carlos",
+        "direccion": "Económico Monterrey, San Carlos, Alajuela.",
+        "lat": 10.624213,
+        "lng": -84.469648,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Importacion Empino Feng Srl",
+        "region": "San Carlos",
+        "direccion": "250 Oeste de la Iglesia Catolica, AGUAS ZARCAS, SAN CARLOS, ALAJUELA",
+        "lat": 10.654439,
+        "lng": -84.381375,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "L & F Tres Hermanos Sociedad De Responsabilidad Limitada",
+        "region": "San Carlos",
+        "direccion": "Económico Ciudad Quesada, Frente Colono, San Carlos, Alajuela.",
+        "lat": 10.600672,
+        "lng": -84.429299,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Royal Soft Company Sociedad Anonima",
+        "region": "San Carlos",
+        "direccion": "MUELLE DE SAN CARLOS FRENTE AL PUENTE LAS IGUANAS, FLORENCIA, SAN CARLOS, ALAJUELA",
+        "lat": 10.647366,
+        "lng": -84.442992,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Xcdr De Costa Rica Sociedad De Responsabilidad Limitada",
+        "region": "San Carlos",
+        "direccion": "Económico Santa Rosa, Pocosol, San Carlos, Alajuela.",
+        "lat": 10.608945,
+        "lng": -84.383324,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-101-699176 S.A.",
+        "region": "San Jose",
+        "direccion": "San José, Desamparados, del parque 100 Sur y 175 Oeste",
+        "lat": 9.932771,
+        "lng": -84.079614,
+        "precision": "exacta",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-102-832356 Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "Economico San Pedro, 400 MTS Sur del Liceo San Pedro, SAN PEDRO, PEREZ ZELEDON, SAN JOSE",
+        "lat": 9.932771,
+        "lng": -84.079614,
+        "precision": "exacta",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "3-102-935890 Srl",
+        "region": "San Jose",
+        "direccion": "Dominical, Plaza Pacifica, Bahia Ballena, Osa.",
+        "lat": 9.932771,
+        "lng": -84.079614,
+        "precision": "exacta",
+        "productos": [
+            "Aceite",
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Alimenta Cinco Cero Seis Sociedad Anonima",
+        "region": "San Jose",
+        "direccion": "Guachipelin de Escazú, Edificio VMG, San José, ESCAZU, SAN JOSE",
+        "lat": 9.959771,
+        "lng": -84.09679,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Alquileres Salitral C & A Sociedad Anonima",
+        "region": "San Jose",
+        "direccion": "SUPER SANTA MARTA, Rincon Grande Pavas,75 Oeste de Importadora Monge, PAVAS, SAN JOSE",
+        "lat": 9.921349,
+        "lng": -84.037123,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Cautivo Limitada",
+        "region": "San Jose",
+        "direccion": "Almacen Hernanos Mendez, San Vito, Contiguo a Terminal Cepul, SAN VITO, COTO BRUS, PUNTARENAS",
+        "lat": 9.906959,
+        "lng": -84.129311,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Comerciantes Detallistas Del Sur Codesur S.A.",
+        "region": "San Jose",
+        "direccion": "Detras Cadesur Daniel Flores.",
+        "lat": 9.951557,
+        "lng": -84.072754,
+        "precision": "aproximada",
+        "productos": [
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Distribuidora Panal Sociedad Anonima",
+        "region": "San Jose",
+        "direccion": "800 Metros Oeste de Metalco cuatro Reinas de Tibas, MATA REDONDA, SAN JOSE",
+        "lat": 9.903192,
+        "lng": -84.067404,
+        "precision": "aproximada",
+        "productos": [
+            "Aceite",
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Fuyi Limitada",
+        "region": "San Jose",
+        "direccion": "100 METROS ESTE DE LA MUNICIPALIDAD DE PEREZ ZELEDON, SAN ISIDRO DE EL GENERAL, PEREZ ZELEDON, SAN J",
+        "lat": 9.951419,
+        "lng": -84.119467,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Bm Sp Sociedad Anonima",
+        "region": "San Jose",
+        "direccion": "Cedi, Perez Zeledón, Daniel Flores",
+        "lat": 9.949532,
+        "lng": -84.026182,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Eco Uvita Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "Económico Uvita, 1,5k Restaurante Flor de La Sabana Uvita.",
+        "lat": 9.915466,
+        "lng": -84.089642,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Eco Villa Ligia Sociedad Anonima",
+        "region": "San Jose",
+        "direccion": "Económico Villa Ligia, Perez Zeledon, SAN ISIDRO DE EL GENERAL, PEREZ ZELEDON, SAN JOSE",
+        "lat": 9.964024,
+        "lng": -84.086487,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Economico Buenos Aires Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "BUENOS AIRES CENTRO, PUNTARENAS",
+        "lat": 9.907467,
+        "lng": -84.043619,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Grupo Estrella De Laurel Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "Supermercado Estrella Laurel",
+        "lat": 9.925571,
+        "lng": -84.13515,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Inversiones Cajon Eco Y Mas Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "Económico Pilas De Cajó, CARMEN, SAN JOSE",
+        "lat": 9.948064,
+        "lng": -84.066726,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Inversiones Economico Ocho R Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "Económico Palmares, Frente Concentrados General San Isidro, SAN ISIDRO DE EL GENERAL, PEREZ ZELEDON,",
+        "lat": 9.900798,
+        "lng": -84.07829,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Inversiones Futuro Cf Sociedad Sociedad De Responsabilidad Limitada",
+        "region": "San Jose",
+        "direccion": "FRENTE A MONGE PALMAR NORTE OSA PUNTARENAS, PALMAR NORTE, PALMAR, OSA, PUNTARENAS",
+        "lat": 9.963957,
+        "lng": -84.110653,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "S J A Y Mahabu S.A.",
+        "region": "San Jose",
+        "direccion": "Cuervito, 300 sur del Súper El Rodeo, Frontera Panamá, Corredores.",
+        "lat": 9.930187,
+        "lng": -84.023674,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz"
+        ],
+        "estado": true
+    },
+    {
+        "nombre": "Supe Good Estacion Diaria Srl",
+        "region": "San Jose",
+        "direccion": "Cajón de Pérez Zeledon, 400 sur de la Flor Mercedes.",
+        "lat": 9.919956,
+        "lng": -84.094969,
+        "precision": "aproximada",
+        "productos": [
+            "Arroz",
+            "Frijoles"
+        ],
+        "estado": true
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "titulo": "Apoyo al productor nacional",
+        "descripcion": "Trabajamos con familias agricultoras de Costa Rica.",
+        "imagen": null,
+        "orden": 1,
+        "estado": true
+    },
+    {
+        "titulo": "Procesos responsables",
+        "descripcion": "Eficiencia y menor impacto en producción y empaque.",
+        "imagen": null,
+        "orden": 2,
+        "estado": true
+    },
+    {
+        "titulo": "Comunidad",
+        "descripcion": "Generamos empleo y desarrollo en Guanacaste.",
+        "imagen": null,
+        "orden": 3,
+        "estado": true
+    }
+]

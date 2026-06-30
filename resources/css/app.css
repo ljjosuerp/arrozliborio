@@ -1,0 +1,130 @@
+/* Liborio webfonts — Lora (titulares, sustituto de Athelas) + Nunito Sans (cuerpo) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,400;1,6..12,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================================================================
+   LIBORIO DESIGN SYSTEM — tokens (importados del handoff de Claude Design)
+   Fuente de verdad: GUIDELINE DE MARCA LIBORIO (Pantone + RGB)
+   ========================================================================= */
+:root {
+  /* ---- Brand seeds ----------------------------------------------------- */
+  --liborio-red:      #B2292E;   /* PANTONE 1805 C — rojo "100% tico" */
+  --liborio-blue:     #0F206C;   /* PANTONE 2756 C — azul institucional */
+  --liborio-celeste:  #87D1E6;   /* PANTONE 187 C  — frescura */
+  --liborio-yellow:   #E0CC00;   /* PANTONE 605 C */
+  --liborio-wheat:    #D7A461;   /* PANTONE 472 C  — trigo / cosecha */
+
+  /* ---- Red scale ---- */
+  --red-50:#FBEDED; --red-100:#F5D3D4; --red-200:#E8A3A5; --red-300:#D97276;
+  --red-400:#C84A4F; --red-500:#B2292E; --red-600:#951F24; --red-700:#76181C;
+  --red-800:#571215; --red-900:#3A0C0E;
+
+  /* ---- Blue scale ---- */
+  --blue-50:#E9ECF6; --blue-100:#C8CFE6; --blue-200:#97A2CC; --blue-300:#6373B0;
+  --blue-400:#38498F; --blue-500:#0F206C; --blue-600:#0C1A58; --blue-700:#091344;
+  --blue-800:#060D30; --blue-900:#04081D;
+
+  /* ---- Celeste scale ---- */
+  --celeste-50:#F2FAFD; --celeste-100:#DEF3F9; --celeste-200:#BFE8F3; --celeste-300:#A3DDED;
+  --celeste-400:#87D1E6; --celeste-500:#5BBBD7; --celeste-600:#389FBE; --celeste-700:#2A7C95;
+
+  /* ---- Yellow & Wheat ---- */
+  --yellow-100:#FBF4BF; --yellow-300:#F0E25C; --yellow-500:#E0CC00; --yellow-700:#A89800;
+  --wheat-100:#F6EADB; --wheat-300:#E7C79C; --wheat-500:#D7A461; --wheat-700:#A9762F;
+
+  /* ---- Neutrals (warm grey) ---- */
+  --white:#FFFFFF; --paper:#FBF8F3; --grey-50:#F6F4F0; --grey-100:#ECE8E1;
+  --grey-200:#DAD4CA; --grey-300:#BDB6AA; --grey-400:#948C7F; --grey-500:#6E665B;
+  --grey-600:#514B43; --grey-700:#3A352F; --grey-800:#262320; --black:#1A1715;
+
+  /* ---- Costa Rica tricolor ---- */
+  --cr-blue:var(--liborio-blue); --cr-white:var(--white); --cr-red:var(--liborio-red);
+
+  /* ---- Semantic aliases ---- */
+  --brand-primary:var(--liborio-red); --brand-primary-hover:var(--red-600); --brand-primary-press:var(--red-700);
+  --brand-secondary:var(--liborio-blue); --brand-secondary-hover:var(--blue-600);
+  --brand-accent:var(--liborio-celeste); --brand-highlight:var(--liborio-yellow); --brand-warm:var(--liborio-wheat);
+  --text-strong:var(--black); --text-body:var(--grey-700); --text-muted:var(--grey-500);
+  --text-faint:var(--grey-400); --text-on-brand:var(--white); --text-on-dark:var(--paper); --text-link:var(--liborio-red);
+  --surface-page:var(--paper); --surface-card:var(--white); --surface-sunken:var(--grey-50);
+  --surface-inverse:var(--blue-500); --surface-brand:var(--red-500);
+  --border-subtle:var(--grey-200); --border-default:var(--grey-300); --border-strong:var(--grey-400); --border-brand:var(--red-200);
+  --success:#2E7D45; --success-surface:#E7F2EA; --warning:#C98A12; --warning-surface:#FBF1DC;
+  --danger:var(--red-600); --danger-surface:var(--red-50); --info:var(--celeste-600); --info-surface:var(--celeste-50);
+  --focus-ring:0 0 0 3px rgba(135,209,230,0.55);
+
+  /* ---- Typography ---- */
+  --font-serif:'Lora','Athelas',Georgia,'Times New Roman',serif;
+  --font-sans:'Nunito Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --font-display:var(--font-serif); --font-body:var(--font-sans);
+  --fw-regular:400; --fw-medium:500; --fw-semibold:600; --fw-bold:700; --fw-extra:800; --fw-black:900;
+  --text-2xs:0.6875rem; --text-xs:0.75rem; --text-sm:0.875rem; --text-md:1rem; --text-lg:1.125rem;
+  --text-xl:1.375rem; --text-2xl:1.75rem; --text-3xl:2.25rem; --text-4xl:2.875rem; --text-5xl:3.75rem; --text-6xl:4.75rem;
+  --leading-tight:1.08; --leading-snug:1.22; --leading-normal:1.5; --leading-relaxed:1.65;
+  --tracking-tight:-0.02em; --tracking-normal:0; --tracking-wide:0.04em; --tracking-caps:0.14em;
+  --body-lg:var(--fw-regular) var(--text-lg)/var(--leading-relaxed) var(--font-body);
+  --body-md:var(--fw-regular) var(--text-md)/var(--leading-normal) var(--font-body);
+  --body-sm:var(--fw-regular) var(--text-sm)/var(--leading-normal) var(--font-body);
+
+  /* ---- Spacing / radii ---- */
+  --space-1:0.25rem; --space-2:0.5rem; --space-3:0.75rem; --space-4:1rem; --space-5:1.5rem;
+  --space-6:2rem; --space-7:2.5rem; --space-8:3rem; --space-9:4rem; --space-10:5rem; --space-12:7rem;
+  --radius-xs:4px; --radius-sm:8px; --radius-md:12px; --radius-lg:18px; --radius-xl:28px;
+  --radius-pill:999px; --radius-card:var(--radius-lg);
+
+  /* ---- Shadows / motion / gradients ---- */
+  --shadow-xs:0 1px 2px rgba(58,12,14,0.06); --shadow-sm:0 2px 6px rgba(58,12,14,0.08);
+  --shadow-md:0 6px 18px rgba(58,12,14,0.10); --shadow-lg:0 16px 40px rgba(58,12,14,0.14);
+  --shadow-brand:0 10px 28px rgba(178,41,46,0.28);
+  --ease-standard:cubic-bezier(0.32,0.08,0.24,1); --ease-out:cubic-bezier(0.16,1,0.3,1); --ease-in:cubic-bezier(0.5,0,0.75,0);
+  --dur-fast:140ms; --dur-base:220ms; --dur-slow:420ms;
+  --grad-red:linear-gradient(135deg,#C84A4F 0%,#B2292E 55%,#76181C 100%);
+  --grad-blue:linear-gradient(135deg,#1B2E80 0%,#0F206C 60%,#091344 100%);
+  --grad-celeste:linear-gradient(135deg,#B7E6F2 0%,#87D1E6 100%);
+  --grad-harvest:linear-gradient(135deg,#E7C79C 0%,#D7A461 100%);
+  --grad-protect-bottom:linear-gradient(to top,rgba(26,23,21,0.78) 0%,rgba(26,23,21,0.0) 70%);
+}
+
+/* ---- Base element styles (en @layer base para ganar sobre preflight) ---- */
+@layer base {
+  body {
+    font: var(--body-md);
+    color: var(--text-body);
+    background: var(--surface-page);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--text-strong);
+    font-weight: var(--fw-bold);
+    line-height: var(--leading-tight);
+    text-wrap: balance;
+  }
+}
+
+/* ---- Helpers de marca ---- */
+.lb-cintillo {
+  height: 8px; width: 100%;
+  background: linear-gradient(to right,
+    var(--cr-blue) 0 33.33%, var(--cr-white) 33.33% 66.66%, var(--cr-red) 66.66% 100%);
+}
+
+[x-cloak] { display: none; }
+
+/* Impresión limpia de recetas: sin cromo del sitio */
+@media print {
+    header, footer, .rec-actions, .rec-cross { display: none !important; }
+    .rec-ingredientes { position: static !important; }
+    body { background: #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
