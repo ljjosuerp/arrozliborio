@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Compania;
+use App\Models\Pagina;
 use App\Models\Parametro;
 use App\Models\Producto;
 use App\Models\Provincia;
@@ -76,6 +77,37 @@ class LiborioSeeder extends Seeder
                 Ubicacion::create(array_merge($r, ['provincia_id' => $prov->id]));
             }
         }
+
+        // ─── Páginas editables (CMS) ───
+        // firstOrCreate por 'clave': si la migración ya insertó la página, no la duplica
+        // ni pisa ediciones hechas desde el admin.
+        Pagina::firstOrCreate(
+            ['clave' => 'fit'],
+            [
+                'nombre' => 'Liborio Fit',
+                'contenido' => [
+                    'hero' => [
+                        'eyebrow' => 'Vamos al grano',
+                        'titulo' => 'Nuevo año, vida saludable',
+                        'texto' => 'Elegí vivir sano este año con Liborio Fit. Un grano de salud en cada plato, para que vos y tu familia disfruten de lo mejor de nuestra tierra.',
+                        'cta' => 'Dónde comprar',
+                    ],
+                    'beneficios_eyebrow' => 'Salud en tu mesa',
+                    'beneficios_titulo' => 'Libre de preocupaciones',
+                    'beneficios' => [
+                        ['icono' => 'corazon', 'titulo' => 'Sin colesterol', 'texto' => 'Cuidá tu corazón en cada plato.'],
+                        ['icono' => 'gota', 'titulo' => 'Bajo en sodio', 'texto' => 'Sabor pleno, menos sal.'],
+                        ['icono' => 'trigo', 'titulo' => 'Libre de gluten', 'texto' => 'Apto para toda la familia.'],
+                        ['icono' => 'chispa', 'titulo' => '99% menos grasa', 'texto' => 'Liviano y lleno de energía.'],
+                    ],
+                    'nota' => '75% más fibra significa que tu digestión te lo va a agradecer. *Comparativa con el arroz blanco.',
+                    'newsletter' => [
+                        'titulo' => 'Recetas Fit, directo a tu correo',
+                        'texto' => 'Explorá las posibilidades con Liborio Fit. Sumate y recibí ideas saludables cada semana.',
+                    ],
+                ],
+            ]
+        );
 
         // ─── Usuario administrador del panel ───
         // ⚠️ CAMBIÁ esta contraseña apenas entres a /admin en producción.

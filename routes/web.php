@@ -3,6 +3,7 @@
 use App\Http\Controllers\EmpleoController;
 use App\Models\Compania;
 use App\Models\Contacto;
+use App\Models\Pagina;
 use App\Models\Producto;
 use App\Models\PuntoVenta;
 use App\Models\Receta;
@@ -15,8 +16,10 @@ use Inertia\Inertia;
 // ─── Inicio ───
 Route::get('/', fn () => Inertia::render('Home'))->name('home');
 
-// ─── Liborio Fit (FitView del design system) ───
-Route::get('/liborio-fit', fn () => Inertia::render('Fit'))->name('liborio-fit');
+// ─── Liborio Fit (contenido editable desde el admin) ───
+Route::get('/liborio-fit', fn () => Inertia::render('Fit', [
+    'contenido' => optional(Pagina::where('clave', 'fit')->first())->contenido,
+]))->name('liborio-fit');
 
 // ─── Páginas de marca (contenido estático con el DS) ───
 Route::get('/conocenos', fn () => Inertia::render('Conocenos'))->name('conocenos');

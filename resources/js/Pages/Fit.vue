@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { Head } from '@inertiajs/vue3';
-import { ShoppingBasket, HeartPulse, Droplet, WheatOff, Sparkles } from 'lucide-vue-next';
+import { ShoppingBasket, HeartPulse, Droplet, WheatOff, Sparkles, Leaf, ShieldCheck } from 'lucide-vue-next';
 import { shoppingUrl } from '@/shopping';
 import PublicLayout from '@/Layouts/PublicLayout.vue';
 import Button from '@/Components/ds/Button.vue';
@@ -13,12 +13,57 @@ import Input from '@/Components/ds/Input.vue';
 import Checkbox from '@/Components/ds/Checkbox.vue';
 import Toast from '@/Components/ds/Toast.vue';
 
-const benefits = [
-    { icon: HeartPulse, t: 'Sin colesterol', d: 'Cuidá tu corazón en cada plato.' },
-    { icon: Droplet, t: 'Bajo en sodio', d: 'Sabor pleno, menos sal.' },
-    { icon: WheatOff, t: 'Libre de gluten', d: 'Apto para toda la familia.' },
-    { icon: Sparkles, t: '99% menos grasa', d: 'Liviano y lleno de energía.' },
-];
+// Contenido editable desde el panel de admin (Filament → Contenido → Páginas).
+// Si la base de datos aún no tiene el registro, se usan los valores por defecto.
+const props = defineProps({
+    contenido: { type: Object, default: null },
+});
+
+// Mapa nombre-de-ícono (guardado en la BD) → componente de lucide.
+const iconMap = {
+    corazon: HeartPulse,
+    gota: Droplet,
+    trigo: WheatOff,
+    chispa: Sparkles,
+    hoja: Leaf,
+    escudo: ShieldCheck,
+};
+const iconFor = (nombre) => iconMap[nombre] || Sparkles;
+
+const defaults = {
+    hero: {
+        eyebrow: 'Vamos al grano',
+        titulo: 'Nuevo año, vida saludable',
+        texto: 'Elegí vivir sano este año con Liborio Fit. Un grano de salud en cada plato, para que vos y tu familia disfruten de lo mejor de nuestra tierra.',
+        cta: 'Dónde comprar',
+    },
+    beneficios_eyebrow: 'Salud en tu mesa',
+    beneficios_titulo: 'Libre de preocupaciones',
+    beneficios: [
+        { icono: 'corazon', titulo: 'Sin colesterol', texto: 'Cuidá tu corazón en cada plato.' },
+        { icono: 'gota', titulo: 'Bajo en sodio', texto: 'Sabor pleno, menos sal.' },
+        { icono: 'trigo', titulo: 'Libre de gluten', texto: 'Apto para toda la familia.' },
+        { icono: 'chispa', titulo: '99% menos grasa', texto: 'Liviano y lleno de energía.' },
+    ],
+    nota: '75% más fibra significa que tu digestión te lo va a agradecer. *Comparativa con el arroz blanco.',
+    newsletter: {
+        titulo: 'Recetas Fit, directo a tu correo',
+        texto: 'Explorá las posibilidades con Liborio Fit. Sumate y recibí ideas saludables cada semana.',
+    },
+};
+
+// Fusiona lo que venga de la BD con los valores por defecto (por si algún campo queda vacío).
+const c = computed(() => {
+    const src = props.contenido || {};
+    return {
+        hero: { ...defaults.hero, ...(src.hero || {}) },
+        beneficios_eyebrow: src.beneficios_eyebrow || defaults.beneficios_eyebrow,
+        beneficios_titulo: src.beneficios_titulo || defaults.beneficios_titulo,
+        beneficios: (Array.isArray(src.beneficios) && src.beneficios.length) ? src.beneficios : defaults.beneficios,
+        nota: src.nota || defaults.nota,
+        newsletter: { ...defaults.newsletter, ...(src.newsletter || {}) },
+    };
+});
 
 const email = ref('');
 const acepta = ref(true);
@@ -42,17 +87,16 @@ const suscribir = () => {
             <img src="/img/liborio/espiga-mark-blue.webp" alt="" style="position:absolute;left:-30px;top:-20px;width:200px;opacity:0.12;" />
             <div class="fit-hero" style="max-width:1180px;margin:0 auto;padding:60px 28px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;">
                 <div>
-                    <Eyebrow color="var(--blue-600)" :with-mark="true">Vamos al grano</Eyebrow>
+                    <Eyebrow color="var(--blue-600)" :with-mark="true">{{ c.hero.eyebrow }}</Eyebrow>
                     <h1 style="font:var(--fw-bold) var(--text-5xl)/1.0 var(--font-display);color:var(--blue-700);margin:12px 0 16px;">
-                        Nuevo año,<br />vida saludable
+                        {{ c.hero.titulo }}
                     </h1>
                     <p style="font:var(--body-lg);color:var(--blue-700);opacity:0.85;max-width:460px;margin-bottom:24px;">
-                        Elegí vivir sano este año con Liborio Fit. Un grano de salud en cada plato, para que vos y
-                        tu familia disfruten de lo mejor de nuestra tierra.
+                        {{ c.hero.texto }}
                     </p>
                     <Button :href="shoppingUrl('Arroz Liborio Fit')" target="_blank" variant="secondary" size="lg">
                         <template #iconLeft><ShoppingBasket :size="20" /></template>
-                        Dónde comprar
+                        {{ c.hero.cta }}
                     </Button>
                 </div>
                 <div style="display:flex;justify-content:center;">
@@ -65,28 +109,28 @@ const suscribir = () => {
         <!-- BENEFICIOS -->
         <section style="max-width:1180px;margin:0 auto;padding:60px 28px;">
             <div style="text-align:center;margin-bottom:36px;">
-                <Eyebrow :with-mark="true">Salud en tu mesa</Eyebrow>
-                <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:var(--text-strong);margin:10px 0 0;">Libre de preocupaciones</h2>
+                <Eyebrow :with-mark="true">{{ c.beneficios_eyebrow }}</Eyebrow>
+                <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:var(--text-strong);margin:10px 0 0;">{{ c.beneficios_titulo }}</h2>
             </div>
-            <div class="fit-benefits" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
-                <Card v-for="b in benefits" :key="b.t" elevation="sm" padding="lg" :style="{ textAlign: 'center' }">
+            <div class="fit-benefits" :style="{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(c.beneficios.length, 4)}, 1fr)`, gap: '20px' }">
+                <Card v-for="(b, i) in c.beneficios" :key="i" elevation="sm" padding="lg" :style="{ textAlign: 'center' }">
                     <div style="width:52px;height:52px;border-radius:50%;background:var(--celeste-100);color:var(--blue-600);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
-                        <component :is="b.icon" :size="24" />
+                        <component :is="iconFor(b.icono)" :size="24" />
                     </div>
-                    <h3 style="font:var(--fw-bold) var(--text-lg)/1.2 var(--font-sans);color:var(--text-strong);margin:0 0 6px;">{{ b.t }}</h3>
-                    <p style="font:var(--body-sm);color:var(--text-muted);margin:0;">{{ b.d }}</p>
+                    <h3 style="font:var(--fw-bold) var(--text-lg)/1.2 var(--font-sans);color:var(--text-strong);margin:0 0 6px;">{{ b.titulo }}</h3>
+                    <p style="font:var(--body-sm);color:var(--text-muted);margin:0;">{{ b.texto }}</p>
                 </Card>
             </div>
-            <p style="text-align:center;font-size:12px;color:var(--text-faint);margin-top:18px;">
-                75% más fibra significa que tu digestión te lo va a agradecer. *Comparativa con el arroz blanco.
+            <p v-if="c.nota" style="text-align:center;font-size:12px;color:var(--text-faint);margin-top:18px;">
+                {{ c.nota }}
             </p>
         </section>
 
         <!-- NEWSLETTER -->
         <section style="background:var(--surface-sunken);border-top:1px solid var(--border-subtle);">
             <div style="max-width:720px;margin:0 auto;padding:52px 28px;text-align:center;">
-                <h2 style="font:var(--fw-bold) var(--text-3xl)/1.1 var(--font-display);color:var(--text-strong);margin:0 0 10px;">Recetas Fit, directo a tu correo</h2>
-                <p style="font:var(--body-md);color:var(--text-body);margin:0 0 22px;">Explorá las posibilidades con Liborio Fit. Sumate y recibí ideas saludables cada semana.</p>
+                <h2 style="font:var(--fw-bold) var(--text-3xl)/1.1 var(--font-display);color:var(--text-strong);margin:0 0 10px;">{{ c.newsletter.titulo }}</h2>
+                <p style="font:var(--body-md);color:var(--text-body);margin:0 0 22px;">{{ c.newsletter.texto }}</p>
                 <form style="display:flex;gap:12px;max-width:480px;margin:0 auto;align-items:flex-start;" @submit.prevent="suscribir">
                     <Input v-model="email" type="email" placeholder="vos@correo.cr" :container-style="{ flex: 1 }" />
                     <Button variant="primary" type="submit">Suscribirme</Button>
