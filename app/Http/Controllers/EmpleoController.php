@@ -65,8 +65,13 @@ class EmpleoController extends Controller
         if ($request->hasFile('cv')) {
             $file = $request->file('cv');
             // Disco privado (local en dev, bucket S3 en producción) — nunca público.
-            $aspirante->cv_path = $file->store('cvs', $cvDisk);
-            $aspirante->cv_nombre = $file->getClientOriginalName();
+            // Si el almacenamiento falla, no bloqueamos la postulación (se guarda sin CV).
+            try {
+                $aspirante->cv_path = $file->store('cvs', $cvDisk);
+                $aspirante->cv_nombre = $file->getClientOriginalName();
+            } catch (\Throwable $e) {
+                report($e);
+            }
         }
         $aspirante->save();
 
