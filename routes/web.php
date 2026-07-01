@@ -74,13 +74,11 @@ Route::post('/hablemos', function (Request $request) {
     return back();
 })->name('hablemos.store');
 
-// ─── Portal de empleo (Fase 5) ───
+// ─── Portal de empleo (Fase 5) — postulación pública, sin login ───
 Route::get('/trabaje-con-nosotros', [EmpleoController::class, 'index'])->name('empleo.index');
 Route::get('/trabaje-con-nosotros/puesto/{puesto}', [EmpleoController::class, 'show'])->name('empleo.show');
-Route::middleware(['auth:sanctum', config('jetstream.auth_session')])->group(function () {
-    Route::get('/trabaje-con-nosotros/puesto/{puesto}/aplicar', [EmpleoController::class, 'aplicarForm'])->name('empleo.aplicar.form');
-    Route::post('/trabaje-con-nosotros/puesto/{puesto}/aplicar', [EmpleoController::class, 'aplicar'])->name('empleo.aplicar');
-});
+Route::get('/trabaje-con-nosotros/puesto/{puesto}/aplicar', [EmpleoController::class, 'aplicarForm'])->name('empleo.aplicar.form');
+Route::post('/trabaje-con-nosotros/puesto/{puesto}/aplicar', [EmpleoController::class, 'aplicar'])->name('empleo.aplicar');
 
 // ─── Páginas públicas pendientes (placeholder branded) ───
 $publicas = [

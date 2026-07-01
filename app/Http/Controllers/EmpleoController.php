@@ -6,7 +6,6 @@ use App\Models\Aplicacion;
 use App\Models\Aspirante;
 use App\Models\PuestoVacante;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
@@ -26,38 +25,30 @@ class EmpleoController extends Controller
     {
         return Inertia::render('Empleo/Show', [
             'puesto' => $puesto,
-            'autenticado' => Auth::check(),
         ]);
     }
 
-    // Formulario de aplicación (requiere login).
+    // Formulario de aplicación (público, sin login).
     public function aplicarForm(PuestoVacante $puesto)
     {
-        $user = Auth::user();
-        $aspirante = Aspirante::where('user_id', $user->id)->first();
-
         return Inertia::render('Empleo/Aplicar', [
             'puesto' => $puesto,
-            'perfil' => [
-                'nombre' => $aspirante->nombre ?? $user->name,
-                'telefono' => $aspirante->telefono ?? '',
-                'cv_nombre' => $aspirante->cv_nombre ?? null,
-            ],
         ]);
     }
 
-    // Procesa la aplicación: guarda perfil de aspirante, CV y la aplicación.
+    // Procesa la aplicación: guarda al aspirante, su CV y la aplicación.
     public function aplicar(Request $request, PuestoVacante $puesto)
     {
         $data = $request->validate([
             'nombre' => ['required', 'string', 'max:120'],
+            'email' => ['required', 'email', 'max:160'],
             'telefono' => ['nullable', 'string', 'max:40'],
             'mensaje' => ['nullable', 'string', 'max:2000'],
             'cv' => ['nullable', 'file', 'mimes:pdf,doc,docx', 'max:4096'],
         ]);
 
-        $user = Auth::user();
-        $aspirante = Aspirante::firstOrNew(['user_id' => $user->id]);
+        // Reusa el aspirante si ya postuló con ese correo; si no, crea uno nuevo.
+        $aspirante = Aspirante::firstOrNew(['email' => $data['email']]);
         $aspirante->nombre = $data['nombre'];
         $aspirante->telefono = $data['telefono'] ?? null;
 
@@ -86,11 +77,11 @@ class EmpleoController extends Controller
         try {
             Mail::raw(
                 "Nueva postulación:\n\nPuesto: {$puesto->titulo}\nNombre: {$aspirante->nombre}\n"
-                ."Correo: {$user->email}\nTeléfono: {$aspirante->telefono}\n\nMensaje:\n"
+                ."Correo: {$aspirante->email}\nTeléfono: {$aspirante->telefono}\n\nMensaje:\n"
                 .($data['mensaje'] ?? '(sin mensaje)'),
-                function ($m) use ($aspirante, $user, $puesto, $cvDisk) {
+                function ($m) use ($aspirante, $puesto, $cvDisk) {
                     $m->to(config('mail.empleo_to'))
-                        ->replyTo($user->email, $aspirante->nombre)
+                        ->replyTo($aspirante->email, $aspirante->nombre)
                         ->subject('Postulación: '.$puesto->titulo.' — '.$aspirante->nombre);
                     if ($aspirante->cv_path && Storage::disk($cvDisk)->exists($aspirante->cv_path)) {
                         $m->attachData(

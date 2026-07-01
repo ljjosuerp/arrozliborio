@@ -16,10 +16,10 @@ class AspirantesTable
     {
         return $table
             ->columns([
-                TextColumn::make('user.name')
-                    ->label('Usuario')
-                    ->searchable(),
                 TextColumn::make('nombre')
+                    ->searchable(),
+                TextColumn::make('email')
+                    ->label('Correo')
                     ->searchable(),
                 TextColumn::make('telefono')
                     ->label('Teléfono')

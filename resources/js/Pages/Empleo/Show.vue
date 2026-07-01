@@ -9,7 +9,6 @@ import Cintillo from '@/Components/ds/Cintillo.vue';
 
 const props = defineProps({
     puesto: { type: Object, required: true },
-    autenticado: { type: Boolean, default: false },
 });
 
 const page = usePage();
@@ -58,9 +57,6 @@ const requisitos = computed(() =>
                 <Link :href="`/trabaje-con-nosotros/puesto/${puesto.id}/aplicar`">
                     <Button variant="primary" size="lg">Aplicar a este puesto</Button>
                 </Link>
-                <span v-if="!autenticado" style="font-family:var(--font-sans);font-size:14px;color:var(--text-muted);">
-                    Necesitás iniciar sesión o registrarte para aplicar.
-                </span>
             </div>
         </section>
 

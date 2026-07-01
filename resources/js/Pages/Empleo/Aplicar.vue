@@ -9,12 +9,12 @@ import Input from '@/Components/ds/Input.vue';
 
 const props = defineProps({
     puesto: { type: Object, required: true },
-    perfil: { type: Object, default: () => ({}) },
 });
 
 const form = useForm({
-    nombre: props.perfil.nombre || '',
-    telefono: props.perfil.telefono || '',
+    nombre: '',
+    email: '',
+    telefono: '',
     mensaje: '',
     cv: null,
 });
@@ -45,7 +45,10 @@ const enviar = () => {
 
         <section style="max-width:720px;margin:0 auto;padding:48px 28px 80px;">
             <form @submit.prevent="enviar" style="display:flex;flex-direction:column;gap:18px;">
-                <Input v-model="form.nombre" label="Nombre completo" :error="form.errors.nombre" />
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="apl-row">
+                    <Input v-model="form.nombre" label="Nombre completo" :error="form.errors.nombre" />
+                    <Input v-model="form.email" type="email" label="Correo" :error="form.errors.email" />
+                </div>
                 <Input v-model="form.telefono" label="Teléfono" :error="form.errors.telefono" />
 
                 <div style="display:flex;flex-direction:column;gap:6px;">
@@ -60,7 +63,7 @@ const enviar = () => {
                     <label class="cv-drop">
                         <Paperclip :size="18" />
                         <span style="font-family:var(--font-sans);font-size:14px;">
-                            {{ form.cv ? form.cv.name : (perfil.cv_nombre ? `Actual: ${perfil.cv_nombre} — subí uno nuevo para reemplazarlo` : 'Seleccioná tu archivo (máx. 4 MB)') }}
+                            {{ form.cv ? form.cv.name : 'Seleccioná tu archivo (máx. 4 MB)' }}
                         </span>
                         <input type="file" accept=".pdf,.doc,.docx" style="display:none;" @change="onFile" />
                     </label>
@@ -97,4 +100,8 @@ const enviar = () => {
     transition: border-color var(--dur-fast) var(--ease-standard), background var(--dur-fast) var(--ease-standard);
 }
 .cv-drop:hover { border-color: var(--brand-accent); background: var(--celeste-50); }
+
+@media (max-width: 560px) {
+    .apl-row { grid-template-columns: 1fr !important; }
+}
 </style>
