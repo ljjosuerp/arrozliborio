@@ -44,7 +44,7 @@ class AplicacionForm
                 Section::make('Mensaje del postulante')
                     ->schema([
                         Placeholder::make('p_mensaje')
-                            ->label('')
+                            ->hiddenLabel()
                             ->content(fn ($record) => $record?->mensaje ?: '(Sin mensaje)'),
                     ]),
 

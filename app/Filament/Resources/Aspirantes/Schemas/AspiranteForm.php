@@ -35,7 +35,7 @@ class AspiranteForm
                             ->label('Archivo adjunto')
                             ->content(fn ($record) => $record?->cv_nombre ?: 'Sin CV adjunto'),
                         Placeholder::make('cv_ayuda')
-                            ->label('')
+                            ->hiddenLabel()
                             ->content('Para abrirlo, usá el botón "Descargar CV" en la lista de aspirantes.'),
                     ])
                     ->columns(2),
