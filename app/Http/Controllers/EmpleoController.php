@@ -61,10 +61,11 @@ class EmpleoController extends Controller
         $aspirante->nombre = $data['nombre'];
         $aspirante->telefono = $data['telefono'] ?? null;
 
+        $cvDisk = config('filesystems.cv_disk');
         if ($request->hasFile('cv')) {
             $file = $request->file('cv');
-            // Disco privado (no accesible por URL) — se descarga solo desde el admin.
-            $aspirante->cv_path = $file->store('cvs', 'local');
+            // Disco privado (local en dev, bucket S3 en producción) — nunca público.
+            $aspirante->cv_path = $file->store('cvs', $cvDisk);
             $aspirante->cv_nombre = $file->getClientOriginalName();
         }
         $aspirante->save();
@@ -82,14 +83,15 @@ class EmpleoController extends Controller
                 "Nueva postulación:\n\nPuesto: {$puesto->titulo}\nNombre: {$aspirante->nombre}\n"
                 ."Correo: {$user->email}\nTeléfono: {$aspirante->telefono}\n\nMensaje:\n"
                 .($data['mensaje'] ?? '(sin mensaje)'),
-                function ($m) use ($aspirante, $user, $puesto) {
+                function ($m) use ($aspirante, $user, $puesto, $cvDisk) {
                     $m->to(config('mail.empleo_to'))
                         ->replyTo($user->email, $aspirante->nombre)
                         ->subject('Postulación: '.$puesto->titulo.' — '.$aspirante->nombre);
-                    if ($aspirante->cv_path && Storage::disk('local')->exists($aspirante->cv_path)) {
-                        $m->attach(Storage::disk('local')->path($aspirante->cv_path), [
-                            'as' => $aspirante->cv_nombre ?: 'CV.pdf',
-                        ]);
+                    if ($aspirante->cv_path && Storage::disk($cvDisk)->exists($aspirante->cv_path)) {
+                        $m->attachData(
+                            Storage::disk($cvDisk)->get($aspirante->cv_path),
+                            $aspirante->cv_nombre ?: 'CV.pdf'
+                        );
                     }
                 }
             );

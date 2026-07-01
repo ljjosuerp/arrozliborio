@@ -47,7 +47,7 @@ class AspirantesTable
                     ->label('Descargar CV')
                     ->icon('heroicon-o-arrow-down-tray')
                     ->visible(fn ($record) => filled($record->cv_path))
-                    ->action(fn ($record) => Storage::disk('local')->download($record->cv_path, $record->cv_nombre)),
+                    ->action(fn ($record) => Storage::disk(config('filesystems.cv_disk'))->download($record->cv_path, $record->cv_nombre)),
                 EditAction::make(),
             ])
             ->toolbarActions([

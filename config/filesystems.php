@@ -16,6 +16,12 @@ return [
     'default' => env('FILESYSTEM_DISK', 'local'),
 
     /*
+    | Disco donde se guardan los CV de las postulaciones (datos privados).
+    | Local en desarrollo; en producción se pone CV_DISK=s3 (bucket privado).
+    */
+    'cv_disk' => env('CV_DISK', 'local'),
+
+    /*
     |--------------------------------------------------------------------------
     | Filesystem Disks
     |--------------------------------------------------------------------------
