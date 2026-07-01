@@ -101,4 +101,17 @@ class EmpleoController extends Controller
 
         return redirect()->route('empleo.show', $puesto->id)->with('aplicado', true);
     }
+
+    // Descarga del CV desde el disco privado. Solo administradores autenticados.
+    // Ruta dedicada (fuera de Filament) para que la descarga sea directa y estable.
+    public function descargarCv(Aspirante $aspirante)
+    {
+        abort_unless(optional(auth()->user())->is_admin, 403);
+        abort_unless($aspirante->cv_path, 404, 'Esta persona no tiene un CV adjunto.');
+
+        $disk = Storage::disk(config('filesystems.cv_disk'));
+        abort_unless($disk->exists($aspirante->cv_path), 404, 'El archivo del CV no se encontró en el almacenamiento.');
+
+        return $disk->download($aspirante->cv_path, $aspirante->cv_nombre ?: 'CV.pdf');
+    }
 }

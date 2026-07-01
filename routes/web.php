@@ -98,6 +98,11 @@ foreach ($publicas as $slug => [$titulo, $fase]) {
     ]))->name($slug);
 }
 
+// ─── Descarga de CV (solo admin autenticado) ───
+Route::get('/rrhh/cv/{aspirante}', [EmpleoController::class, 'descargarCv'])
+    ->middleware('auth')
+    ->name('cv.descargar');
+
 // ─── Área autenticada (Jetstream) ───
 Route::middleware([
     'auth:sanctum',

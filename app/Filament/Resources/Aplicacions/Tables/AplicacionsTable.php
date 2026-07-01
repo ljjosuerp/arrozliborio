@@ -8,7 +8,6 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Support\Facades\Storage;
 
 class AplicacionsTable
 {
@@ -53,13 +52,12 @@ class AplicacionsTable
                 //
             ])
             ->recordActions([
-                // Descarga del CV desde el disco privado — solo dentro del panel autenticado.
+                // Descarga vía ruta dedicada (se abre directo, sin pasar por Livewire).
                 Action::make('descargarCv')
                     ->label('CV')
                     ->icon('heroicon-o-arrow-down-tray')
                     ->visible(fn ($record) => filled($record->aspirante?->cv_path))
-                    ->action(fn ($record) => Storage::disk(config('filesystems.cv_disk'))
-                        ->download($record->aspirante->cv_path, $record->aspirante->cv_nombre)),
+                    ->url(fn ($record) => route('cv.descargar', $record->aspirante), shouldOpenInNewTab: true),
                 EditAction::make()->label('Ver / gestionar'),
             ])
             ->toolbarActions([
