@@ -25,7 +25,7 @@ const cifras = [
 // TODO: reemplazar con reseñas REALES de clientes antes de depender de ellas.
 const testimonios = [
     { texto: 'El arroz que siempre queda suelto y en su punto. En mi casa no falta.', autor: 'María Fernández', lugar: 'San José', estrellas: 5 },
-    { texto: 'Con Liborio Fit por fin encontré un integral que a los chiquitos les gusta.', autor: 'Carlos Jiménez', lugar: 'Alajuela', estrellas: 5 },
+    { texto: 'Con Liborio Fit por fin encontré un semi integral que a los chiquitos les gusta.', autor: 'Carlos Jiménez', lugar: 'Alajuela', estrellas: 5 },
     { texto: 'Producto tico de calidad. Apoyo al productor nacional en cada compra.', autor: 'Ana Rodríguez', lugar: 'Guanacaste', estrellas: 5 },
 ];
 
@@ -34,7 +34,7 @@ const products = [
     { color: 'red', label: 'Arroz Liborio 99%', weight: '1.8 kg / 1 kg', tag: 'Más vendido', tagColor: 'red', image: P + 'Arroz-liborio-99-18kg.webp' },
     { color: 'blue', label: 'Frijoles', weight: '700 g', tag: 'Negro y rojo', tagColor: 'blue', image: P + 'Frijoles-negros-liborio-700g.webp' },
     { color: 'wheat', label: 'Aceite', weight: '900 ml', kind: 'bottle', tag: 'Vegetal', tagColor: 'wheat', image: P + 'Aceite-Liborio.webp' },
-    { color: 'celeste', label: 'Liborio Fit', weight: '1.8 kg / 1 kg', tag: 'Integral', tagColor: 'celeste', image: P + 'Arroz-liborio-fit-99-18kg.webp' },
+    { color: 'celeste', label: 'Liborio Fit', weight: '1.8 kg', tag: 'Semi Integral', tagColor: 'celeste', image: P + 'Arroz-liborio-fit-99-18kg.webp' },
 ];
 
 const trust = [
@@ -128,7 +128,7 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
             <img src="/img/liborio/espiga-mark-white.webp" alt="" class="lb-breathe" style="position:absolute;right:-20px;bottom:-20px;width:220px;opacity:0.08;transform-origin:bottom right;" />
             <div class="fit-grid" style="max-width:1180px;margin:0 auto;padding:60px 28px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:44px;align-items:center;">
                 <div v-reveal class="lb-float" style="display:flex;justify-content:center;gap:10px;">
-                    <ProductPack color="celeste" label="Liborio Fit" weight="Integral" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" />
+                    <ProductPack color="celeste" label="Liborio Fit" weight="1.8 kg · Semi Integral" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" />
                 </div>
                 <div v-reveal="120">
                     <Eyebrow color="var(--brand-accent)" :with-mark="true">Vamos al grano</Eyebrow>

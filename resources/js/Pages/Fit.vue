@@ -112,7 +112,7 @@ const suscribir = () => {
                 </div>
                 <div style="display:flex;justify-content:center;">
                     <div style="transform:scale(1.25);">
-                        <div class="lb-float"><ProductPack color="celeste" label="Liborio Fit" weight="900 g · Integral" highlight="Fit" image="/img/liborio/productos/Arroz-liborio-fit-99-18kg.webp" /></div>
+                        <div class="lb-float"><ProductPack color="celeste" label="Liborio Fit" weight="1.8 kg · Semi Integral" highlight="Fit" image="/img/liborio/productos/Arroz-liborio-fit-99-18kg.webp" /></div>
                     </div>
                 </div>
             </div>
