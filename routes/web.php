@@ -57,12 +57,15 @@ Route::post('/hablemos', function (Request $request) {
 
     $contacto = Contacto::create($data);
 
-    // En local MAIL_MAILER=log → se escribe en storage/logs/laravel.log (no envía).
+    // Aviso al correo de la empresa. replyTo = el cliente, para responderle directo.
+    // En local con MAIL_MAILER=log se escribe en storage/logs/laravel.log (no envía).
     try {
         Mail::raw(
             "Nuevo mensaje de contacto:\n\nNombre: {$contacto->nombre}\nEmail: {$contacto->email}\n"
             ."Teléfono: {$contacto->telefono}\nAsunto: {$contacto->asunto}\n\n{$contacto->mensaje}",
-            fn ($m) => $m->to('info@arrozliborio.com')->subject('Contacto web: '.($contacto->asunto ?: 'Sin asunto'))
+            fn ($m) => $m->to(config('mail.contact_to'))
+                ->replyTo($contacto->email, $contacto->nombre)
+                ->subject('Contacto web: '.($contacto->asunto ?: 'Sin asunto'))
         );
     } catch (\Throwable $e) {
         // No bloquear el guardado si el mailer falla.

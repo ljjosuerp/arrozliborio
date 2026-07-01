@@ -115,4 +115,14 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    /*
+    | Correo que recibe los avisos del formulario de contacto (bandeja monitoreada).
+    */
+    'contact_to' => env('MAIL_CONTACT_TO', 'info@arrozliborio.com'),
+
+    /*
+    | Correo que recibe los avisos de postulaciones de empleo (con el CV adjunto).
+    */
+    'empleo_to' => env('MAIL_EMPLEO_TO', 'kortega@arrozliborio.com'),
+
 ];

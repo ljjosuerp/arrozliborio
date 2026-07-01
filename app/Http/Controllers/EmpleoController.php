@@ -7,6 +7,8 @@ use App\Models\Aspirante;
 use App\Models\PuestoVacante;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class EmpleoController extends Controller
@@ -73,6 +75,27 @@ class EmpleoController extends Controller
             'mensaje' => $data['mensaje'] ?? null,
             'estado' => 'recibida',
         ]);
+
+        // Aviso a Recursos Humanos con el CV adjunto. replyTo = el postulante.
+        try {
+            Mail::raw(
+                "Nueva postulación:\n\nPuesto: {$puesto->titulo}\nNombre: {$aspirante->nombre}\n"
+                ."Correo: {$user->email}\nTeléfono: {$aspirante->telefono}\n\nMensaje:\n"
+                .($data['mensaje'] ?? '(sin mensaje)'),
+                function ($m) use ($aspirante, $user, $puesto) {
+                    $m->to(config('mail.empleo_to'))
+                        ->replyTo($user->email, $aspirante->nombre)
+                        ->subject('Postulación: '.$puesto->titulo.' — '.$aspirante->nombre);
+                    if ($aspirante->cv_path && Storage::disk('local')->exists($aspirante->cv_path)) {
+                        $m->attach(Storage::disk('local')->path($aspirante->cv_path), [
+                            'as' => $aspirante->cv_nombre ?: 'CV.pdf',
+                        ]);
+                    }
+                }
+            );
+        } catch (\Throwable $e) {
+            // No bloquear la postulación si el mailer falla.
+        }
 
         return redirect()->route('empleo.show', $puesto->id)->with('aplicado', true);
     }
