@@ -36,6 +36,7 @@ const defaults = {
         titulo: 'Nuevo año, vida saludable',
         texto: 'Elegí vivir sano este año con Liborio Fit. Un grano de salud en cada plato, para que vos y tu familia disfruten de lo mejor de nuestra tierra.',
         cta: 'Dónde comprar',
+        tema: 'celeste',
     },
     beneficios_eyebrow: 'Salud en tu mesa',
     beneficios_titulo: 'Libre de preocupaciones',
@@ -65,6 +66,15 @@ const c = computed(() => {
     };
 });
 
+// Temas de color del hero (elegibles desde el admin). Todos con buen contraste.
+const temas = {
+    celeste: { grad: 'linear-gradient(135deg,#B7E6F2 0%,#87D1E6 100%)', texto: 'var(--blue-700)', eyebrow: 'var(--blue-600)', marca: '/img/liborio/espiga-mark-blue.webp' },
+    verde: { grad: 'linear-gradient(135deg,#D3ECC2 0%,#8DC63F 100%)', texto: '#1B4B21', eyebrow: '#2E7D32', marca: '/img/liborio/espiga-mark-blue.webp' },
+    amarillo: { grad: 'linear-gradient(135deg,#FBF4BF 0%,#F0E25C 100%)', texto: 'var(--blue-700)', eyebrow: '#8A7A00', marca: '/img/liborio/espiga-mark-blue.webp' },
+    trigo: { grad: 'linear-gradient(135deg,#F6EADB 0%,#D7A461 100%)', texto: '#5A3D18', eyebrow: '#A9762F', marca: '/img/liborio/espiga-mark-blue.webp' },
+};
+const tema = computed(() => temas[c.value.hero.tema] || temas.celeste);
+
 const email = ref('');
 const acepta = ref(true);
 const toast = ref(null);
@@ -82,16 +92,16 @@ const suscribir = () => {
     <Head title="Liborio Fit" />
 
     <PublicLayout>
-        <!-- HERO celeste -->
-        <section style="position:relative;background:var(--grad-celeste);overflow:hidden;">
-            <img src="/img/liborio/espiga-mark-blue.webp" alt="" style="position:absolute;left:-30px;top:-20px;width:200px;opacity:0.12;" />
+        <!-- HERO (color editable desde el admin) -->
+        <section :style="{ position: 'relative', background: tema.grad, overflow: 'hidden' }">
+            <img :src="tema.marca" alt="" style="position:absolute;left:-30px;top:-20px;width:200px;opacity:0.12;" />
             <div class="fit-hero" style="max-width:1180px;margin:0 auto;padding:60px 28px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;">
                 <div>
-                    <Eyebrow color="var(--blue-600)" :with-mark="true">{{ c.hero.eyebrow }}</Eyebrow>
-                    <h1 style="font:var(--fw-bold) var(--text-5xl)/1.0 var(--font-display);color:var(--blue-700);margin:12px 0 16px;">
+                    <Eyebrow :color="tema.eyebrow" :with-mark="true">{{ c.hero.eyebrow }}</Eyebrow>
+                    <h1 :style="{ font: 'var(--fw-bold) var(--text-5xl)/1.0 var(--font-display)', color: tema.texto, margin: '12px 0 16px' }">
                         {{ c.hero.titulo }}
                     </h1>
-                    <p style="font:var(--body-lg);color:var(--blue-700);opacity:0.85;max-width:460px;margin-bottom:24px;">
+                    <p :style="{ font: 'var(--body-lg)', color: tema.texto, opacity: 0.85, maxWidth: '460px', marginBottom: '24px' }">
                         {{ c.hero.texto }}
                     </p>
                     <Button :href="shoppingUrl('Arroz Liborio Fit')" target="_blank" variant="secondary" size="lg">

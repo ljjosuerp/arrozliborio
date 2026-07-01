@@ -22,6 +22,16 @@ class PaginaForm
                         TextInput::make('contenido.hero.titulo')->label('Título')->required(),
                         Textarea::make('contenido.hero.texto')->label('Texto')->rows(3)->columnSpanFull(),
                         TextInput::make('contenido.hero.cta')->label('Texto del botón'),
+                        Select::make('contenido.hero.tema')
+                            ->label('Color de fondo')
+                            ->options([
+                                'celeste' => '🩵 Celeste (por defecto)',
+                                'verde' => '💚 Verde',
+                                'amarillo' => '💛 Amarillo',
+                                'trigo' => '🌾 Trigo',
+                            ])
+                            ->default('celeste')
+                            ->selectablePlaceholder(false),
                     ])
                     ->columns(2),
 
