@@ -61,7 +61,11 @@ class EmpleoController extends Controller
                 $aspirante->cv_path = $file->store('cvs', $cvDisk);
                 $aspirante->cv_nombre = $file->getClientOriginalName();
             } catch (\Throwable $e) {
-                report($e);
+                // No bloqueamos la postulación, pero dejamos rastro claro del fallo del bucket.
+                \Log::error('Falló al guardar el CV en el disco "'.$cvDisk.'": '.$e->getMessage(), [
+                    'archivo' => $file->getClientOriginalName(),
+                    'excepcion' => get_class($e),
+                ]);
             }
         }
         $aspirante->save();
