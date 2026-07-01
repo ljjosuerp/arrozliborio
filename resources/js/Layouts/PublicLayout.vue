@@ -3,6 +3,7 @@ import { ref, computed } from 'vue';
 import { Link, usePage } from '@inertiajs/vue3';
 import { ShoppingBasket, Instagram, Facebook, Youtube, Menu } from 'lucide-vue-next';
 import Cintillo from '@/Components/ds/Cintillo.vue';
+import Asistente from '@/Components/ds/Asistente.vue';
 
 // Nav del design system, mapeado a las rutas reales del proyecto.
 const links = [
@@ -119,6 +120,9 @@ const mobileOpen = ref(false);
                 © {{ new Date().getFullYear() }} Arrocera Liborio · Hecho en Costa Rica · Apoyamos al productor nacional
             </div>
         </footer>
+
+        <!-- Asistente Liborio (chatbot IA) -->
+        <Asistente />
     </div>
 </template>
 

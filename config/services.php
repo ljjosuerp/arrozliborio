@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    // Asistente Liborio (IA). La API key se configura en Laravel Cloud, nunca en el código.
+    'anthropic' => [
+        'key' => env('ANTHROPIC_API_KEY'),
+        'model' => env('ANTHROPIC_MODEL', 'claude-haiku-4-5'),
+    ],
+
 ];

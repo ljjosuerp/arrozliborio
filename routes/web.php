@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsistenteController;
 use App\Http\Controllers\EmpleoController;
 use App\Models\Compania;
 use App\Models\Contacto;
@@ -97,6 +98,11 @@ foreach ($publicas as $slug => [$titulo, $fase]) {
         'fase' => $fase,
     ]))->name($slug);
 }
+
+// ─── Asistente Liborio (chatbot con IA) ───
+Route::post('/asistente', [AsistenteController::class, 'chat'])
+    ->middleware('throttle:20,1')
+    ->name('asistente.chat');
 
 // ─── Descarga de CV (solo admin autenticado) ───
 Route::get('/rrhh/cv/{aspirante}', [EmpleoController::class, 'descargarCv'])
