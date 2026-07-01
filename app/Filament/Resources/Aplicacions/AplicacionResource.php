@@ -18,15 +18,29 @@ class AplicacionResource extends Resource
 {
     protected static ?string $model = Aplicacion::class;
 
-    protected static ?string $navigationLabel = 'Aplicaciones';
+    protected static ?string $navigationLabel = 'Postulaciones';
 
-    protected static ?string $modelLabel = 'Aplicación';
+    protected static ?string $modelLabel = 'Postulación';
 
-    protected static ?string $pluralModelLabel = 'Aplicaciones';
+    protected static ?string $pluralModelLabel = 'Postulaciones';
 
     protected static string|\UnitEnum|null $navigationGroup = 'Empleo';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    // Las postulaciones llegan desde el formulario público del sitio; no se crean a mano.
+    public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    // Muestra un contador con las postulaciones sin abrir (estado "recibida").
+    public static function getNavigationBadge(): ?string
+    {
+        $n = static::getModel()::where('estado', 'recibida')->count();
+
+        return $n > 0 ? (string) $n : null;
+    }
 
     public static function form(Schema $schema): Schema
     {
