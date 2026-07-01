@@ -122,9 +122,42 @@
     body { background: #fff; }
 }
 
+/* ---- Capa de movimiento (dinamismo del sitio) ---- */
+
+/* 1) Scroll-reveal: aparece con fade + slide al entrar en pantalla (dir. v-reveal). */
+.lb-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+.lb-reveal.is-visible { opacity: 1; transform: none; }
+
+/* 2) Micro-interacción hover: elevación suave para cualquier tarjeta/enlace. */
+.lb-lift { transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+.lb-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+/* 8) Transición de página: el contenido entra con un fade-up en cada navegación. */
+#app.lb-page-enter > * { animation: lbPageIn var(--dur-base) var(--ease-out) both; }
+@keyframes lbPageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* 9) Hero con vida: flotación lenta del empaque y respiración de la marca de agua. */
+.lb-float { animation: lbFloat 6s var(--ease-standard) infinite; }
+@keyframes lbFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+.lb-breathe { animation: lbBreathe 9s ease-in-out infinite; }
+@keyframes lbBreathe { 0%,100% { transform: scale(1); opacity: 0.10; } 50% { transform: scale(1.06); opacity: 0.16; } }
+
+/* Barras del comparador: se llenan al entrar en pantalla. */
+.lb-bar-fill { width: 0; transition: width 1100ms var(--ease-out); }
+.lb-bar-fill.is-filled { width: var(--fill, 0%); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+  /* Nada queda oculto si el usuario prefiere sin movimiento. */
+  .lb-reveal { opacity: 1 !important; transform: none !important; }
+  .lb-bar-fill { width: var(--fill, 0%) !important; }
 }

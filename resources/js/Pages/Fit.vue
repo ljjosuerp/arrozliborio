@@ -12,6 +12,7 @@ import Cintillo from '@/Components/ds/Cintillo.vue';
 import Input from '@/Components/ds/Input.vue';
 import Checkbox from '@/Components/ds/Checkbox.vue';
 import Toast from '@/Components/ds/Toast.vue';
+import Comparador from '@/Components/ds/Comparador.vue';
 
 // Contenido editable desde el panel de admin (Filament → Contenido → Páginas).
 // Si la base de datos aún no tiene el registro, se usan los valores por defecto.
@@ -110,7 +111,9 @@ const suscribir = () => {
                     </Button>
                 </div>
                 <div style="display:flex;justify-content:center;">
-                    <div style="transform:scale(1.25);"><ProductPack color="celeste" label="Liborio Fit" weight="900 g · Integral" highlight="Fit" image="/img/liborio/productos/Arroz-liborio-fit-99-18kg.webp" /></div>
+                    <div style="transform:scale(1.25);">
+                        <div class="lb-float"><ProductPack color="celeste" label="Liborio Fit" weight="900 g · Integral" highlight="Fit" image="/img/liborio/productos/Arroz-liborio-fit-99-18kg.webp" /></div>
+                    </div>
                 </div>
             </div>
             <Cintillo :height="8" />
@@ -118,12 +121,12 @@ const suscribir = () => {
 
         <!-- BENEFICIOS -->
         <section style="max-width:1180px;margin:0 auto;padding:60px 28px;">
-            <div style="text-align:center;margin-bottom:36px;">
+            <div v-reveal style="text-align:center;margin-bottom:36px;">
                 <Eyebrow :with-mark="true">{{ c.beneficios_eyebrow }}</Eyebrow>
                 <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:var(--text-strong);margin:10px 0 0;">{{ c.beneficios_titulo }}</h2>
             </div>
             <div class="fit-benefits" :style="{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(c.beneficios.length, 4)}, 1fr)`, gap: '20px' }">
-                <Card v-for="(b, i) in c.beneficios" :key="i" elevation="sm" padding="lg" :style="{ textAlign: 'center' }">
+                <Card v-for="(b, i) in c.beneficios" :key="i" v-reveal="i * 90" elevation="sm" padding="lg" :style="{ textAlign: 'center' }">
                     <div style="width:52px;height:52px;border-radius:50%;background:var(--celeste-100);color:var(--blue-600);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
                         <component :is="iconFor(b.icono)" :size="24" />
                     </div>
@@ -134,6 +137,19 @@ const suscribir = () => {
             <p v-if="c.nota" style="text-align:center;font-size:12px;color:var(--text-faint);margin-top:18px;">
                 {{ c.nota }}
             </p>
+        </section>
+
+        <!-- COMPARADOR Fit vs arroz blanco -->
+        <section style="background:var(--surface-sunken);border-top:1px solid var(--border-subtle);">
+            <div style="max-width:820px;margin:0 auto;padding:60px 28px;">
+                <div v-reveal style="text-align:center;margin-bottom:28px;">
+                    <Eyebrow :with-mark="true">La diferencia se nota</Eyebrow>
+                    <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:var(--text-strong);margin:10px 0 0;">¿Por qué elegir Fit?</h2>
+                </div>
+                <div v-reveal="100">
+                    <Comparador :color="tema.eyebrow" />
+                </div>
+            </div>
         </section>
 
         <!-- NEWSLETTER -->

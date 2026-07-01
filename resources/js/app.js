@@ -2,9 +2,10 @@
 import '../css/app.css';
 
 import { createApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/vue3';
+import { createInertiaApp, router } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import reveal from './directives/reveal';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -15,9 +16,19 @@ createInertiaApp({
         return createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .directive('reveal', reveal)
             .mount(el);
     },
     progress: {
-        color: '#4B5563',
+        color: '#B2292E',
     },
+});
+
+// Transición de página: reinicia el fade-up del contenido en cada navegación.
+router.on('navigate', () => {
+    const app = document.getElementById('app');
+    if (!app) return;
+    app.classList.remove('lb-page-enter');
+    void app.offsetWidth; // fuerza reflow para reiniciar la animación
+    app.classList.add('lb-page-enter');
 });

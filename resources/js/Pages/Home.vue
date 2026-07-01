@@ -9,8 +9,25 @@ import Tag from '@/Components/ds/Tag.vue';
 import Eyebrow from '@/Components/ds/Eyebrow.vue';
 import ProductPack from '@/Components/ds/ProductPack.vue';
 import Cintillo from '@/Components/ds/Cintillo.vue';
+import Counter from '@/Components/ds/Counter.vue';
+import Testimonios from '@/Components/ds/Testimonios.vue';
 
 const go = (href) => router.visit(href);
+
+// Cifras de marca (datos reales: 7 provincias, ~80 puntos de venta, 100% CR, 4 líneas).
+const cifras = [
+    { to: 100, suffix: '%', label: 'Costarricense' },
+    { to: 80, suffix: '+', label: 'Puntos de venta' },
+    { to: 7, suffix: '', label: 'Provincias' },
+    { to: 4, suffix: '', label: 'Líneas de producto' },
+];
+
+// TODO: reemplazar con reseñas REALES de clientes antes de depender de ellas.
+const testimonios = [
+    { texto: 'El arroz que siempre queda suelto y en su punto. En mi casa no falta.', autor: 'María Fernández', lugar: 'San José', estrellas: 5 },
+    { texto: 'Con Liborio Fit por fin encontré un integral que a los chiquitos les gusta.', autor: 'Carlos Jiménez', lugar: 'Alajuela', estrellas: 5 },
+    { texto: 'Producto tico de calidad. Apoyo al productor nacional en cada compra.', autor: 'Ana Rodríguez', lugar: 'Guanacaste', estrellas: 5 },
+];
 
 const P = '/img/liborio/productos/';
 const products = [
@@ -53,8 +70,8 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
                     </div>
                 </div>
                 <div style="display:flex;justify-content:center;gap:8px;">
-                    <div style="margin-top:30px;"><ProductPack color="red" label="Arroz" weight="1.8 kg" :image="P + 'Arroz-liborio-99-18kg.webp'" /></div>
-                    <div><ProductPack color="celeste" label="Liborio Fit" weight="1.8 kg" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" /></div>
+                    <div class="lb-float" style="margin-top:30px;"><ProductPack color="red" label="Arroz" weight="1.8 kg" :image="P + 'Arroz-liborio-99-18kg.webp'" /></div>
+                    <div class="lb-float" style="animation-delay:-3s;"><ProductPack color="celeste" label="Liborio Fit" weight="1.8 kg" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" /></div>
                 </div>
             </div>
             <Cintillo :height="8" />
@@ -69,9 +86,21 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
             </div>
         </section>
 
+        <!-- CIFRAS -->
+        <section style="max-width:1180px;margin:0 auto;padding:56px 28px 8px;">
+            <div v-reveal class="cifras-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center;">
+                <div v-for="c in cifras" :key="c.label">
+                    <div style="font:var(--fw-bold) var(--text-5xl)/1 var(--font-display);color:var(--brand-primary);">
+                        <Counter :to="c.to" :suffix="c.suffix" />
+                    </div>
+                    <div style="font-family:var(--font-sans);font-weight:600;color:var(--text-muted);margin-top:6px;">{{ c.label }}</div>
+                </div>
+            </div>
+        </section>
+
         <!-- PRODUCTS -->
-        <section style="max-width:1180px;margin:0 auto;padding:64px 28px 40px;">
-            <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:30px;">
+        <section style="max-width:1180px;margin:0 auto;padding:48px 28px 40px;">
+            <div v-reveal style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:30px;">
                 <div>
                     <Eyebrow :with-mark="true">Nuestra cartera</Eyebrow>
                     <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:var(--text-strong);margin:10px 0 0;">Productos Liborio</h2>
@@ -81,7 +110,7 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
                 </button>
             </div>
             <div class="products-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
-                <Card v-for="p in products" :key="p.label" elevation="sm" padding="lg" :interactive="true" :style="{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }">
+                <Card v-for="(p, idx) in products" :key="p.label" v-reveal="idx * 90" elevation="sm" padding="lg" :interactive="true" :style="{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }">
                     <Tag :color="p.tagColor" :style="{ alignSelf: 'flex-start' }">{{ p.tag }}</Tag>
                     <div style="margin:18px 0 6px;">
                         <ProductPack :color="p.color" :label="p.label" :weight="p.weight" :kind="p.kind || 'bag'" :highlight="p.label === 'Liborio Fit' ? 'Fit' : ''" :image="p.image" />
@@ -96,12 +125,12 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
 
         <!-- FIT BAND -->
         <section style="background:var(--surface-inverse);position:relative;overflow:hidden;margin:40px 0;">
-            <img src="/img/liborio/espiga-mark-white.webp" alt="" style="position:absolute;right:-20px;bottom:-20px;width:220px;opacity:0.08;" />
+            <img src="/img/liborio/espiga-mark-white.webp" alt="" class="lb-breathe" style="position:absolute;right:-20px;bottom:-20px;width:220px;opacity:0.08;transform-origin:bottom right;" />
             <div class="fit-grid" style="max-width:1180px;margin:0 auto;padding:60px 28px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:44px;align-items:center;">
-                <div style="display:flex;justify-content:center;gap:10px;">
+                <div v-reveal class="lb-float" style="display:flex;justify-content:center;gap:10px;">
                     <ProductPack color="celeste" label="Liborio Fit" weight="Integral" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" />
                 </div>
-                <div>
+                <div v-reveal="120">
                     <Eyebrow color="var(--brand-accent)" :with-mark="true">Vamos al grano</Eyebrow>
                     <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:#fff;margin:12px 0 14px;">Salud en tu mesa,<br />libre de preocupaciones</h2>
                     <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;">
@@ -113,9 +142,20 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
             </div>
         </section>
 
+        <!-- TESTIMONIOS -->
+        <section style="max-width:1180px;margin:0 auto;padding:56px 28px;">
+            <div v-reveal style="text-align:center;margin-bottom:34px;">
+                <Eyebrow :with-mark="true">Lo que dicen las familias</Eyebrow>
+                <h2 style="font:var(--fw-bold) var(--text-4xl)/1.05 var(--font-display);color:var(--text-strong);margin:10px 0 0;">Parte de tu mesa</h2>
+            </div>
+            <div v-reveal="100">
+                <Testimonios :items="testimonios" />
+            </div>
+        </section>
+
         <!-- PRODUCER STORY -->
         <section style="max-width:1180px;margin:0 auto;padding:20px 28px 80px;">
-            <div class="story-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+            <div v-reveal class="story-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
                 <div>
                     <Eyebrow :with-mark="true">Apoyamos al productor nacional</Eyebrow>
                     <h2 style="font:var(--fw-bold) var(--text-3xl)/1.1 var(--font-display);color:var(--text-strong);margin:12px 0 16px;">
@@ -152,6 +192,7 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
     .products-grid { grid-template-columns: repeat(2, 1fr) !important; }
     .fit-grid { grid-template-columns: 1fr !important; }
     .story-grid { grid-template-columns: 1fr !important; }
+    .cifras-grid { grid-template-columns: repeat(2, 1fr) !important; row-gap: 28px !important; }
 }
 @media (max-width: 480px) {
     .products-grid { grid-template-columns: 1fr !important; }
