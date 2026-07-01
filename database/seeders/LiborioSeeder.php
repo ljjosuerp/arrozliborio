@@ -79,7 +79,8 @@ class LiborioSeeder extends Seeder
 
         // ─── Usuario administrador del panel ───
         // ⚠️ CAMBIÁ esta contraseña apenas entres a /admin en producción.
-        User::updateOrCreate(
+        // firstOrCreate: no pisa la contraseña si el admin ya existe (para re-seeds seguros).
+        User::firstOrCreate(
             ['email' => 'admin@arrozliborio.com'],
             [
                 'name' => 'Admin Liborio',

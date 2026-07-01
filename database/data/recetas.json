@@ -7,7 +7,7 @@
         "porciones": "4-6",
         "preparacion": "35 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/frijoles-charros-ticos.png",
+        "imagen": "/img/liborio/recetas/frijoles-charros-ticos.webp",
         "slug": "frijoles-charros-ticos",
         "estado": true
     },
@@ -19,7 +19,7 @@
         "porciones": "4",
         "preparacion": "35 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/arroz-con-atun-al-horno-tipo-pastel.png",
+        "imagen": "/img/liborio/recetas/arroz-con-atun-al-horno-tipo-pastel.webp",
         "slug": "arroz-con-atun-al-horno-tipo-pastel",
         "estado": true
     },
@@ -31,7 +31,7 @@
         "porciones": "4",
         "preparacion": "25 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/arroz-cantones-tico.png",
+        "imagen": "/img/liborio/recetas/arroz-cantones-tico.webp",
         "slug": "arroz-cantones-tico",
         "estado": true
     },
@@ -43,7 +43,7 @@
         "porciones": "4",
         "preparacion": "30 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/guacho-de-arroz-sopa-espesa-tica.png",
+        "imagen": "/img/liborio/recetas/guacho-de-arroz-sopa-espesa-tica.webp",
         "slug": "guacho-de-arroz-sopa-espesa-tica",
         "estado": true
     },
@@ -67,7 +67,7 @@
         "porciones": "5",
         "preparacion": "20-35 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/arroz-osito-arroz-amarillo-con-forma-de-oso.jpg",
+        "imagen": "/img/liborio/recetas/arroz-osito-arroz-amarillo-con-forma-de-oso.webp",
         "slug": "arroz-osito-arroz-amarillo-con-forma-de-oso",
         "estado": true
     },
@@ -79,7 +79,7 @@
         "porciones": "4",
         "preparacion": "15-20 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/burritos-de-frijoles-y-queso.jpg",
+        "imagen": "/img/liborio/recetas/burritos-de-frijoles-y-queso.webp",
         "slug": "burritos-de-frijoles-y-queso",
         "estado": true
     },
@@ -91,7 +91,7 @@
         "porciones": "6",
         "preparacion": "20-35 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/plato-arcoiris-carita-de-arroz-con-frutas-y-vegeta.jpg",
+        "imagen": "/img/liborio/recetas/plato-arcoiris-carita-de-arroz-con-frutas-y-vegeta.webp",
         "slug": "plato-arcoiris-carita-de-arroz-con-frutas-y-vegetales",
         "estado": true
     },
@@ -103,7 +103,7 @@
         "porciones": "5",
         "preparacion": "20-35 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/arroz-girasol-arroz-amarillo-con-vegetales-en-form.jpg",
+        "imagen": "/img/liborio/recetas/arroz-girasol-arroz-amarillo-con-vegetales-en-form.webp",
         "slug": "arroz-girasol-arroz-amarillo-con-vegetales-en-forma-de-sol",
         "estado": true
     },
@@ -115,7 +115,7 @@
         "porciones": "10 empanadas medianas",
         "preparacion": "35-40 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/empanadas-de-frijol-tradicionales-para-cafe-de-la-.jpg",
+        "imagen": "/img/liborio/recetas/empanadas-de-frijol-tradicionales-para-cafe-de-la-.webp",
         "slug": "empanadas-de-frijol-tradicionales-para-cafe-de-la-tarde",
         "estado": true
     },
@@ -127,7 +127,7 @@
         "porciones": "6",
         "preparacion": "50-60 minutos",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/arroz-con-leche-costarricense.jpg",
+        "imagen": "/img/liborio/recetas/arroz-con-leche-costarricense.webp",
         "slug": "arroz-con-leche-costarricense",
         "estado": true
     },
@@ -139,7 +139,7 @@
         "porciones": "6 vasos",
         "preparacion": "20 minutos (más tiempo de enfriado)",
         "dificultad": "Baja",
-        "imagen": "/img/liborio/recetas/fresco-de-arroz-arroz-con-leche-frio.jpg",
+        "imagen": "/img/liborio/recetas/fresco-de-arroz-arroz-con-leche-frio.webp",
         "slug": "fresco-de-arroz-arroz-con-leche-frio",
         "estado": true
     }

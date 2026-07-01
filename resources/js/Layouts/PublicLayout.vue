@@ -33,7 +33,7 @@ const mobileOpen = ref(false);
             <Cintillo :height="4" />
             <div style="max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:28px;">
                 <Link href="/" style="display:flex;flex-shrink:0;">
-                    <img src="/img/liborio/logo-liborio-red.png" alt="Arroz Liborio" style="height:42px;" />
+                    <img src="/img/liborio/logo-liborio-red.webp" alt="Arroz Liborio" style="height:42px;" />
                 </Link>
 
                 <!-- Nav desktop -->
@@ -95,7 +95,7 @@ const mobileOpen = ref(false);
             <Cintillo :height="6" />
             <div class="lb-footer-grid" style="max-width:1180px;margin:0 auto;padding:48px 28px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;">
                 <div>
-                    <img src="/img/liborio/logo-liborio-white.png" alt="Arroz Liborio" style="height:46px;margin-bottom:14px;" />
+                    <img src="/img/liborio/logo-liborio-white.webp" alt="Arroz Liborio" style="height:46px;margin-bottom:14px;" />
                     <p style="font-size:14px;line-height:1.6;max-width:240px;margin:0;">
                         Arroz, frijoles y aceite 100% costarricenses. De la pampa a tu mesa.
                     </p>

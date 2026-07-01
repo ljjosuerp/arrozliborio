@@ -42,7 +42,7 @@ const mapQuery = encodeURIComponent(
     <PublicLayout>
         <!-- Hero -->
         <section style="position:relative;background:var(--grad-blue);overflow:hidden;">
-            <img src="/img/liborio/espiga-mark-white.png" alt="" style="position:absolute;right:-10px;bottom:-20px;width:200px;opacity:0.1;" />
+            <img src="/img/liborio/espiga-mark-white.webp" alt="" style="position:absolute;right:-10px;bottom:-20px;width:200px;opacity:0.1;" />
             <div style="position:relative;max-width:1180px;margin:0 auto;padding:60px 28px;">
                 <Eyebrow color="var(--brand-accent)" :with-mark="true">Estamos para ayudarte</Eyebrow>
                 <h1 style="font:var(--fw-bold) var(--text-5xl)/1.0 var(--font-display);color:#fff;margin:12px 0 12px;">Hablemos</h1>

@@ -14,10 +14,10 @@ const props = defineProps({
 const img = (f) => `/img/liborio/${f}`;
 
 const palettes = {
-    red: { bg: 'var(--grad-red)', fg: '#fff', logo: 'logo-liborio-white.png', espiga: 'espiga-mark-white.png' },
-    blue: { bg: 'var(--grad-blue)', fg: '#fff', logo: 'logo-liborio-white.png', espiga: 'espiga-mark-white.png' },
-    celeste: { bg: 'var(--grad-celeste)', fg: 'var(--blue-700)', logo: 'logo-liborio-blue.png', espiga: 'espiga-mark-blue.png' },
-    wheat: { bg: 'var(--grad-harvest)', fg: 'var(--wheat-700)', logo: 'logo-liborio-red.png', espiga: 'espiga-mark-red.png' },
+    red: { bg: 'var(--grad-red)', fg: '#fff', logo: 'logo-liborio-white.webp', espiga: 'espiga-mark-white.webp' },
+    blue: { bg: 'var(--grad-blue)', fg: '#fff', logo: 'logo-liborio-white.webp', espiga: 'espiga-mark-white.webp' },
+    celeste: { bg: 'var(--grad-celeste)', fg: 'var(--blue-700)', logo: 'logo-liborio-blue.webp', espiga: 'espiga-mark-blue.webp' },
+    wheat: { bg: 'var(--grad-harvest)', fg: 'var(--wheat-700)', logo: 'logo-liborio-red.webp', espiga: 'espiga-mark-red.webp' },
 };
 
 const p = computed(() => palettes[props.color] || palettes.red);
@@ -28,7 +28,7 @@ const isBottle = computed(() => props.kind === 'bottle');
     <!-- Foto real del producto (renders oficiales de arrozliborio.com) -->
     <div v-if="image" style="display:flex;flex-direction:column;align-items:center;">
         <div style="width:172px;height:210px;display:flex;align-items:center;justify-content:center;">
-            <img :src="image" :alt="label" style="max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(58,12,14,0.18));" />
+            <img :src="image" :alt="label" loading="lazy" decoding="async" style="max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(58,12,14,0.18));" />
         </div>
         <div style="margin-top:10px;font-family:var(--font-sans);font-size:13px;color:var(--text-muted);">{{ weight }}</div>
     </div>

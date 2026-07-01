@@ -32,7 +32,7 @@ const grads = ['var(--grad-red)', 'var(--grad-blue)', 'var(--grad-harvest)', 'va
 
     <PublicLayout>
         <section style="position:relative;background:var(--grad-harvest);overflow:hidden;">
-            <img src="/img/liborio/espiga-mark-red.png" alt="" style="position:absolute;right:-20px;bottom:-30px;width:220px;opacity:0.15;" />
+            <img src="/img/liborio/espiga-mark-red.webp" alt="" style="position:absolute;right:-20px;bottom:-30px;width:220px;opacity:0.15;" />
             <div style="position:relative;max-width:1180px;margin:0 auto;padding:60px 28px;">
                 <Eyebrow color="var(--wheat-700)" :with-mark="true">Cocina con Liborio</Eyebrow>
                 <h1 style="font:var(--fw-bold) var(--text-5xl)/1.0 var(--font-display);color:var(--text-strong);margin:12px 0 12px;">Recetas</h1>
@@ -70,7 +70,7 @@ const grads = ['var(--grad-red)', 'var(--grad-blue)', 'var(--grad-harvest)', 'va
                 >
                     <!-- Foto real o portada de gradiente -->
                     <div style="position:relative;height:200px;overflow:hidden;">
-                        <img v-if="r.imagen" :src="r.imagen" :alt="r.nombre" style="width:100%;height:100%;object-fit:cover;" />
+                        <img v-if="r.imagen" :src="r.imagen" :alt="r.nombre" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
                         <div v-else :style="{ height: '100%', background: grads[i % grads.length], display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 18px' }">
                             <span style="font-family:var(--font-display);font-weight:700;font-size:20px;color:rgba(255,255,255,0.95);text-align:center;">{{ r.nombre }}</span>
                         </div>

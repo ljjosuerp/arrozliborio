@@ -20,7 +20,7 @@ const compromisos = [
 
     <PublicLayout>
         <section style="position:relative;background:var(--grad-harvest);overflow:hidden;">
-            <img src="/img/liborio/espiga-mark-red.png" alt="" style="position:absolute;right:-20px;bottom:-30px;width:220px;opacity:0.15;" />
+            <img src="/img/liborio/espiga-mark-red.webp" alt="" style="position:absolute;right:-20px;bottom:-30px;width:220px;opacity:0.15;" />
             <div style="position:relative;max-width:1180px;margin:0 auto;padding:64px 28px;">
                 <Eyebrow color="var(--wheat-700)" :with-mark="true">Sostenibilidad</Eyebrow>
                 <h1 style="font:var(--fw-bold) var(--text-5xl)/1.0 var(--font-display);color:var(--text-strong);max-width:680px;margin:12px 0 16px;">Apoyamos al productor nacional</h1>

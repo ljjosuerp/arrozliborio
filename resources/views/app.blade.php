@@ -11,9 +11,9 @@
         <meta property="og:title" content="{{ config('app.name', 'Arrocera Liborio') }}">
         <meta property="og:description" content="Arroz, frijoles y aceite 100% costarricenses. De la pampa a tu mesa.">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="/img/liborio/logo-liborio-red.png">
+        <meta property="og:image" content="/img/liborio/logo-liborio-red.webp">
         <meta name="theme-color" content="#B2292E">
-        <link rel="icon" type="image/png" href="/img/liborio/espiga-mark-red.png">
+        <link rel="icon" type="image/png" href="/img/liborio/espiga-mark-red.webp">
 
         {{-- Google Tag Manager --}}
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

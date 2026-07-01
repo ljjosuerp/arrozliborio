@@ -8,7 +8,7 @@
         "pack_kind": "bag",
         "tag": "Semi Integral",
         "tag_color": "celeste",
-        "imagen": "/img/liborio/productos/Arroz-liborio-fit-99-18kg.png",
+        "imagen": "/img/liborio/productos/Arroz-liborio-fit-99-18kg.webp",
         "orden": 1,
         "estado": true,
         "enlaces_compra": [
@@ -31,7 +31,7 @@
         "pack_kind": "bag",
         "tag": "Más vendido",
         "tag_color": "red",
-        "imagen": "/img/liborio/productos/Arroz-liborio-99-18kg.png",
+        "imagen": "/img/liborio/productos/Arroz-liborio-99-18kg.webp",
         "orden": 2,
         "estado": true,
         "enlaces_compra": null
@@ -45,7 +45,7 @@
         "pack_kind": "bag",
         "tag": null,
         "tag_color": null,
-        "imagen": "/img/liborio/productos/Arroz-liborio-95-18kg.png",
+        "imagen": "/img/liborio/productos/Arroz-liborio-95-18kg.webp",
         "orden": 3,
         "estado": true,
         "enlaces_compra": null
@@ -87,7 +87,7 @@
         "pack_kind": "bag",
         "tag": "Negro",
         "tag_color": "blue",
-        "imagen": "/img/liborio/productos/Frijoles-negros-liborio-700g.png",
+        "imagen": "/img/liborio/productos/Frijoles-negros-liborio-700g.webp",
         "orden": 6,
         "estado": true,
         "enlaces_compra": null
@@ -101,7 +101,7 @@
         "pack_kind": "bag",
         "tag": "Rojo",
         "tag_color": "blue",
-        "imagen": "/img/liborio/productos/Frijoles-rojos-liborio-700g.png",
+        "imagen": "/img/liborio/productos/Frijoles-rojos-liborio-700g.webp",
         "orden": 7,
         "estado": true,
         "enlaces_compra": null
@@ -115,7 +115,7 @@
         "pack_kind": "bottle",
         "tag": "Vegetal",
         "tag_color": "wheat",
-        "imagen": "/img/liborio/productos/Aceite-Liborio.png",
+        "imagen": "/img/liborio/productos/Aceite-Liborio.webp",
         "orden": 8,
         "estado": true,
         "enlaces_compra": null

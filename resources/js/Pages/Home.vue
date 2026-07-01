@@ -14,10 +14,10 @@ const go = (href) => router.visit(href);
 
 const P = '/img/liborio/productos/';
 const products = [
-    { color: 'red', label: 'Arroz Liborio 99%', weight: '1.8 kg / 1 kg', tag: 'Más vendido', tagColor: 'red', image: P + 'Arroz-liborio-99-18kg.png' },
-    { color: 'blue', label: 'Frijoles', weight: '700 g', tag: 'Negro y rojo', tagColor: 'blue', image: P + 'Frijoles-negros-liborio-700g.png' },
-    { color: 'wheat', label: 'Aceite', weight: '900 ml', kind: 'bottle', tag: 'Vegetal', tagColor: 'wheat', image: P + 'Aceite-Liborio.png' },
-    { color: 'celeste', label: 'Liborio Fit', weight: '1.8 kg / 1 kg', tag: 'Integral', tagColor: 'celeste', image: P + 'Arroz-liborio-fit-99-18kg.png' },
+    { color: 'red', label: 'Arroz Liborio 99%', weight: '1.8 kg / 1 kg', tag: 'Más vendido', tagColor: 'red', image: P + 'Arroz-liborio-99-18kg.webp' },
+    { color: 'blue', label: 'Frijoles', weight: '700 g', tag: 'Negro y rojo', tagColor: 'blue', image: P + 'Frijoles-negros-liborio-700g.webp' },
+    { color: 'wheat', label: 'Aceite', weight: '900 ml', kind: 'bottle', tag: 'Vegetal', tagColor: 'wheat', image: P + 'Aceite-Liborio.webp' },
+    { color: 'celeste', label: 'Liborio Fit', weight: '1.8 kg / 1 kg', tag: 'Integral', tagColor: 'celeste', image: P + 'Arroz-liborio-fit-99-18kg.webp' },
 ];
 
 const trust = [
@@ -36,7 +36,7 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
     <PublicLayout>
         <!-- HERO -->
         <section style="position:relative;background:var(--grad-red);overflow:hidden;">
-            <img src="/img/liborio/hero-liborio-pattern.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.22;mix-blend-mode:luminosity;" />
+            <img src="/img/liborio/hero-liborio-pattern.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.22;mix-blend-mode:luminosity;" />
             <div class="hero-grid" style="position:relative;max-width:1180px;margin:0 auto;padding:70px 28px 84px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;">
                 <div>
                     <Eyebrow color="rgba(255,255,255,0.9)" :with-mark="true">Arroz de Costa Rica</Eyebrow>
@@ -53,8 +53,8 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
                     </div>
                 </div>
                 <div style="display:flex;justify-content:center;gap:8px;">
-                    <div style="margin-top:30px;"><ProductPack color="red" label="Arroz" weight="1.8 kg" :image="P + 'Arroz-liborio-99-18kg.png'" /></div>
-                    <div><ProductPack color="celeste" label="Liborio Fit" weight="1.8 kg" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.png'" /></div>
+                    <div style="margin-top:30px;"><ProductPack color="red" label="Arroz" weight="1.8 kg" :image="P + 'Arroz-liborio-99-18kg.webp'" /></div>
+                    <div><ProductPack color="celeste" label="Liborio Fit" weight="1.8 kg" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" /></div>
                 </div>
             </div>
             <Cintillo :height="8" />
@@ -96,10 +96,10 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
 
         <!-- FIT BAND -->
         <section style="background:var(--surface-inverse);position:relative;overflow:hidden;margin:40px 0;">
-            <img src="/img/liborio/espiga-mark-white.png" alt="" style="position:absolute;right:-20px;bottom:-20px;width:220px;opacity:0.08;" />
+            <img src="/img/liborio/espiga-mark-white.webp" alt="" style="position:absolute;right:-20px;bottom:-20px;width:220px;opacity:0.08;" />
             <div class="fit-grid" style="max-width:1180px;margin:0 auto;padding:60px 28px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:44px;align-items:center;">
                 <div style="display:flex;justify-content:center;gap:10px;">
-                    <ProductPack color="celeste" label="Liborio Fit" weight="Integral" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.png'" />
+                    <ProductPack color="celeste" label="Liborio Fit" weight="Integral" highlight="Fit" :image="P + 'Arroz-liborio-fit-99-18kg.webp'" />
                 </div>
                 <div>
                     <Eyebrow color="var(--brand-accent)" :with-mark="true">Vamos al grano</Eyebrow>
@@ -132,7 +132,7 @@ const fitClaims = ['Sin colesterol', 'Bajo en sodio', 'Libre de gluten', '99% me
                     </Button>
                 </div>
                 <div style="position:relative;border-radius:var(--radius-lg);overflow:hidden;height:280px;background:var(--grad-harvest);box-shadow:var(--shadow-md);">
-                    <img src="/img/liborio/hero-liborio-pattern.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3;mix-blend-mode:multiply;" />
+                    <img src="/img/liborio/hero-liborio-pattern.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3;mix-blend-mode:multiply;" />
                     <div style="position:absolute;inset:0;display:flex;align-items:flex-end;padding:22px;background:var(--grad-protect-bottom);">
                         <div style="color:#fff;">
                             <div style="font-family:var(--font-display);font-weight:700;font-size:22px;">De la pampa a su mesa</div>

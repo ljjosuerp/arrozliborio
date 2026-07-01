@@ -39,7 +39,7 @@ const suscribir = () => {
     <PublicLayout>
         <!-- HERO celeste -->
         <section style="position:relative;background:var(--grad-celeste);overflow:hidden;">
-            <img src="/img/liborio/espiga-mark-blue.png" alt="" style="position:absolute;left:-30px;top:-20px;width:200px;opacity:0.12;" />
+            <img src="/img/liborio/espiga-mark-blue.webp" alt="" style="position:absolute;left:-30px;top:-20px;width:200px;opacity:0.12;" />
             <div class="fit-hero" style="max-width:1180px;margin:0 auto;padding:60px 28px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;">
                 <div>
                     <Eyebrow color="var(--blue-600)" :with-mark="true">Vamos al grano</Eyebrow>
@@ -56,7 +56,7 @@ const suscribir = () => {
                     </Button>
                 </div>
                 <div style="display:flex;justify-content:center;">
-                    <div style="transform:scale(1.25);"><ProductPack color="celeste" label="Liborio Fit" weight="900 g · Integral" highlight="Fit" image="/img/liborio/productos/Arroz-liborio-fit-99-18kg.png" /></div>
+                    <div style="transform:scale(1.25);"><ProductPack color="celeste" label="Liborio Fit" weight="900 g · Integral" highlight="Fit" image="/img/liborio/productos/Arroz-liborio-fit-99-18kg.webp" /></div>
                 </div>
             </div>
             <Cintillo :height="8" />

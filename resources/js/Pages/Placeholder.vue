@@ -16,7 +16,7 @@ defineProps({
 
     <PublicLayout>
         <section style="position:relative;background:var(--grad-red);overflow:hidden;">
-            <img src="/img/liborio/hero-liborio-pattern.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.18;mix-blend-mode:luminosity;" />
+            <img src="/img/liborio/hero-liborio-pattern.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.18;mix-blend-mode:luminosity;" />
             <div style="position:relative;max-width:1180px;margin:0 auto;padding:56px 28px;">
                 <Eyebrow color="rgba(255,255,255,0.9)" :with-mark="true">Arrocera Liborio</Eyebrow>
                 <h1 style="font:var(--fw-bold) var(--text-5xl)/1.0 var(--font-display);color:#fff;margin:12px 0 0;">{{ titulo }}</h1>
